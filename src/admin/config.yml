@@ -3,7 +3,7 @@
 
 backend:
   name: github
-  repo: UZIVATEL/lukashavranek-web   # TODO: přepsat na skutečné "uživatel/repozitář"
+  repo: lukhavran/lukashavranek-web
   branch: main
 
 site_url: https://www.lukashavranek.cz

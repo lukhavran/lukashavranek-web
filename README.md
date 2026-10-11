@@ -24,7 +24,7 @@ Styly zůstávají v `src/assets/style.css`. Všechny odkazy ve vygenerovaném w
 ## 1. Nasazení (jednorázově)
 
 1. **GitHub:** vytvořte repozitář a nahrajte do něj obsah této složky (`node_modules` a `_site` se nenahrávají, jsou v `.gitignore`).
-2. **Přepište repozitář v editoru:** v `src/admin/config.yml` změňte řádek `repo: UZIVATEL/lukashavranek-web` na skutečný `uživatel/repozitář`.
+2. **Repozitář v editoru:** v `src/admin/config.yml` je nastavený `repo: lukhavran/lukashavranek-web`. Pokud repozitář přejmenujete, přepište i tento řádek.
 3. **Netlify:** *Add new site → Import an existing project* → vyberte repozitář. Build příkaz a složka se načtou z `netlify.toml` (`npm run build`, `_site`).
 4. **Doména:** v Netlify *Domain management → Add a domain* a podle pokynů nastavte DNS u registrátora (obvykle `CNAME www → <název>.netlify.app`, případně Netlify DNS). HTTPS certifikát Netlify vystaví sám.
    Pokud bude doména jiná než `www.lukashavranek.cz`, přepište ji v `src/_data/site.json`, `src/robots.txt` a `src/admin/config.yml` a v JSON-LD blocích stránek (hledejte `lukashavranek.cz` ve složce `src/pages/`).
