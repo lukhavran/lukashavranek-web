@@ -1,0 +1,152 @@
+# Sveltia CMS — editor webu lukashavranek.cz
+# Dostupný na /admin/. Každé uložení = commit do GitHubu, Netlify pak web sám přegeneruje.
+
+backend:
+  name: github
+  repo: UZIVATEL/lukashavranek-web   # TODO: přepsat na skutečné "uživatel/repozitář"
+  branch: main
+
+site_url: https://www.lukashavranek.cz
+display_url: https://www.lukashavranek.cz
+
+# Nahrané obrázky se ukládají do repozitáře a web je pak servíruje z /assets/img/
+media_folder: src/assets/img
+public_folder: /assets/img
+
+# Adresy bez diakritiky: "Jak si udržet pozornost" -> jak-si-udrzet-pozornost
+slug:
+  encoding: ascii
+  clean_accents: true
+
+collections:
+  # ------------------------------------------------------------------ PODCAST
+  - name: episodes
+    label: Podcast — epizody
+    label_singular: epizodu
+    description: Epizody podcastu Rezonance. Zobrazují se jen na stránce Podcast, na blogu ne.
+    folder: src/content/episodes
+    extension: md
+    format: yaml-frontmatter
+    create: true
+    slug: "{{fields.episode}}-{{slug}}"
+    summary: "{{episode}} · {{title}}"
+    sortable_fields: [episode, title]
+    fields:
+      - { label: Název epizody, name: title, widget: string }
+      - label: Číslo epizody
+        name: episode
+        widget: string
+        hint: Dvě číslice, např. 02. Podle čísla se epizody řadí (nejvyšší nahoře) a vzniká z něj adresa stránky.
+        pattern: ['^\d{2,3}$', "Zadejte číslo se dvěma číslicemi, např. 02"]
+      - { label: Datum vydání, name: date, widget: datetime, type: date, hint: Používá se ve strukturovaných datech pro Google. }
+      - { label: Podtitul, name: subtitle, widget: string, required: false, hint: Krátká věta pod názvem na stránce epizody. }
+      - { label: Délka (minuty), name: duration_min, widget: number, value_type: int, min: 1, required: false }
+      - label: Kde epizoda běží
+        name: platform
+        widget: select
+        default: youtube
+        options:
+          - { label: YouTube, value: youtube }
+          - { label: Spotify, value: spotify }
+      - label: ID videa / epizody
+        name: media_id
+        widget: string
+        hint: "YouTube: část adresy za v= (např. p1sZNBIoM60). Spotify: část adresy za /episode/."
+      - label: Obrázek epizody
+        name: image
+        widget: image
+        required: false
+        hint: Poměr 16:9, ideálně 1280×720 px a do 300 kB. Když nic nenahrajete, použije se náhled z YouTube.
+      - { label: Úvodní odstavec, name: lead, widget: text, required: false, hint: Zvýrazněný text nad hlavním popisem. }
+      - label: Text epizody
+        name: body
+        widget: markdown
+        required: false
+        buttons: [bold, italic, link, heading-two, bulleted-list, numbered-list, quote]
+      - label: Kapitoly
+        name: chapters
+        widget: list
+        required: false
+        hint: Odkazy na časy ve videu. Fungují jen pro YouTube.
+        summary: "{{fields.time}} — {{fields.label}}"
+        fields:
+          - label: Čas
+            name: time
+            widget: string
+            hint: Ve tvaru 2:30 nebo 1:02:30.
+            pattern: ['^\d{1,2}(:\d{2}){1,2}$', "Zadejte čas ve tvaru 2:30"]
+          - { label: Název kapitoly, name: label, widget: string }
+      - label: Zmíněné odkazy
+        name: links
+        widget: list
+        required: false
+        hint: Odkaz na epizodu na YouTube se přidá sám.
+        summary: "{{fields.label}}"
+        fields:
+          - { label: Text odkazu, name: label, widget: string }
+          - { label: Adresa (URL), name: url, widget: string, pattern: ['^https?://', "Adresa musí začínat https://"] }
+      - { label: Poznámka pod odkazy, name: links_note, widget: string, required: false, hint: "Např. slevový kód. Tučně: **text**." }
+      - label: Popis pro Google
+        name: description
+        widget: text
+        hint: Stručné shrnutí, maximálně 155 znaků.
+        pattern: ['^[\s\S]{1,155}$', "Maximálně 155 znaků"]
+      - { label: Popis při sdílení na sítích, name: social_description, widget: text, required: false, hint: Nepovinné. Když zůstane prázdné, použije se popis pro Google. }
+      - { label: Text na kartě v přehledu epizod, name: card_text, widget: text, required: false, hint: Nepovinné. Když zůstane prázdné, použije se popis pro Google. }
+
+  # --------------------------------------------------------------------- BLOG
+  - name: articles
+    label: Blog — články
+    label_singular: článek
+    description: "Dva druhy článků: odkaz na článek jinde (např. GrowJOB) nebo vlastní článek s textem přímo na tomto webu."
+    folder: src/content/articles
+    extension: md
+    format: yaml-frontmatter
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: [date, title]
+    fields:
+      - { label: Název článku, name: title, widget: string }
+      - label: Téma
+        name: category
+        widget: select
+        options:
+          - { label: Návyky, value: navyky }
+          - { label: Pozornost, value: pozornost }
+          - { label: Plánování, value: planovani }
+          - { label: Energie, value: energie }
+          - { label: Běh, value: beh }
+      - { label: Datum zveřejnění, name: date, widget: datetime, type: date, required: false, hint: "Články s datem se řadí od nejnovějšího a jsou nad staršími články bez data." }
+      - { label: Perex (krátký popis na kartě), name: summary, widget: text }
+      - label: Odkaz na externí článek
+        name: external_url
+        widget: string
+        required: false
+        hint: Vyplňte jen u článku, který je na jiném webu (karta pak vede ven). U vlastního článku nechte prázdné a napište text níže.
+        pattern: ['^https?://', "Adresa musí začínat https://"]
+      - { label: Název webu s externím článkem, name: source, widget: string, required: false, default: GrowJOB, hint: Zobrazí se jako „Číst na blogu …“. }
+      - label: Text článku
+        name: body
+        widget: markdown
+        required: false
+        hint: Jen pro vlastní články.
+        buttons: [bold, italic, link, heading-two, heading-three, bulleted-list, numbered-list, quote]
+      - { label: Obrázek, name: image, widget: image, required: false, hint: Jen pro vlastní články. Ideálně 1280×720 px a do 300 kB. }
+      - { label: Popis obrázku, name: image_alt, widget: string, required: false }
+      - { label: Popis pro Google, name: seo_description, widget: text, required: false, hint: Nepovinné. Když zůstane prázdné, použije se perex. }
+      - { label: Pořadí (jen u starších článků bez data), name: order, widget: number, value_type: int, min: 1, required: false }
+
+  # ---------------------------------------------------------------- NASTAVENÍ
+  - name: settings
+    label: Nastavení
+    files:
+      - name: podcast
+        label: Podcast — úvod stránky a odkazy na platformy
+        file: src/_data/podcast.yml
+        fields:
+          - { label: Úvodní text, name: intro, widget: text }
+          - { label: Odkaz na YouTube, name: youtube_url, widget: string, required: false }
+          - { label: Odkaz na Spotify, name: spotify_url, widget: string, required: false, hint: Až podcast poběží na Spotify, vložte sem adresu a tlačítko se na stránce objeví. }
+          - { label: Odkaz na Apple Podcasts, name: apple_url, widget: string, required: false }
+          - { label: Poznámka pod tlačítky, name: note, widget: text, required: false, hint: Až doplníte další platformy, text upravte nebo smažte. }

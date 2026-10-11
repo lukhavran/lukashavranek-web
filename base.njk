@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="{{ theme_color or '#0E1E38' }}">
+<title>{{ seo_title or title }}</title>
+<meta name="description" content="{{ description }}">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+<meta property="og:title" content="{{ og_title or seo_title or title }}">
+<meta property="og:description" content="{{ og_description or description }}">
+<meta property="og:type" content="{{ og_type or 'website' }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+{%- block social_image %}{% if og_image %}
+<meta property="og:image" content="{{ og_image }}">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="720">
+<meta name="twitter:card" content="summary_large_image">
+{%- endif %}{% endblock %}
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:site_name" content="{{ site.name }}">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230E1E38'/%3E%3Ctext x='32' y='42' font-family='Arial' font-size='26' font-style='italic' font-weight='800' fill='%23FEBA6F' text-anchor='middle'%3ELH%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ root }}assets/style.css">
+{% block jsonld %}{% endblock %}
+</head>
+<body>
+<a href="#main" class="skip-link">Přeskočit na obsah</a>
+{% include "header.njk" %}
+
+<main id="main">{% block main %}{% endblock %}</main>
+
+{% include "footer.njk" %}
+
+<button class="to-top" id="toTop" aria-label="Zpět nahoru">↑</button>
+<script src="{{ root }}assets/main.js"></script>
+</body>
+</html>

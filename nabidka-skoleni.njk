@@ -1,0 +1,373 @@
+---
+permalink: "/nabidka-skoleni/"
+nav: "nabidka"
+title: "Nabídka firemních školení 2026 — 10 témat | Lukáš Havránek"
+description: "Pozornost a soustředění, time management, dopaminová střízlivost, mindfulness pro firmy, prevence vyhoření a návyky. Přednášky, workshopy i akademie."
+og_title: "Nabídka firemních školení 2026 — 10 témat | Lukáš Havránek"
+og_description: "Pozornost a soustředění, time management, dopaminová střízlivost, mindfulness pro firmy, prevence vyhoření a návyky. Přednášky, workshopy i akademie."
+og_type: "website"
+theme_color: "#0E1E38"
+---
+{% extends "base.njk" %}
+{% block jsonld %}{% raw %}<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://www.lukashavranek.cz/#lukas",
+  "name": "Ing. Lukáš Havránek",
+  "jobTitle": "Lektor osobního rozvoje",
+  "description": "Lektor se zaměřením na pozornost, sebedisciplínu, mindfulness a udržitelnou pracovní výkonnost. B2B školení pro firmy od roku 2010.",
+  "email": "lukas@lukashavranek.cz",
+  "url": "https://www.lukashavranek.cz/",
+  "address": {"@type": "PostalAddress", "streetAddress": "Erenburgova 204/3", "postalCode": "779 00", "addressLocality": "Olomouc", "addressCountry": "CZ"},
+  "sameAs": ["https://www.instagram.com/lukhavran", "https://www.facebook.com/lukas.havranek.official", "https://www.youtube.com/@lukhavran", "https://www.linkedin.com/in/lukashavranek/"],
+  "knowsLanguage": ["cs", "en"],
+  "memberOf": {"@type": "Organization", "name": "GrowJOB s.r.o."}
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ItemList","name":"Nabídka školení 2026","itemListElement":[{"@type":"ListItem","position":1,"name":"Pozornost a soustředění v době informačního přetížení"},{"@type":"ListItem","position":2,"name":"Plánování a systém práce v době nekonečných úkolů"},{"@type":"ListItem","position":3,"name":"Dopaminová střízlivost aneb jak se neubavit k smrti"},{"@type":"ListItem","position":4,"name":"Akademie: Udržitelná práce"},{"@type":"ListItem","position":5,"name":"Umění relaxace — klidné nervy i v době plné stresu"},{"@type":"ListItem","position":6,"name":"Energie a výkon v rovnováze aneb tělo jako baterie"},{"@type":"ListItem","position":7,"name":"Fenomén mindfulness — všímavost a meditace prakticky"},{"@type":"ListItem","position":8,"name":"Udržitelná změna — realistická cesta za sebedisciplínou"},{"@type":"ListItem","position":9,"name":"Opustit neřesti — jak přemýšlet nad opouštěním zlozvyků"},{"@type":"ListItem","position":10,"name":"Odložit mobil a žít"}]}
+</script>{% endraw %}{% endblock %}
+{% block main %}
+
+  <section class="block" style="padding-bottom:40px">
+    <div class="wrap">
+      <span class="eyebrow">Nabídka školení</span>
+      <h1 style="font-size:clamp(1.9rem,4.4vw,2.9rem)">Rychlý přehled všech mých témat</h1>
+      <p class="sub" style="margin-top:8px;font-size:1.15rem"><strong>10</strong> témat rozdělených do <strong>3</strong> tematických bloků</p>
+
+      <div class="legend">
+        <h2 style="font-size:1.1rem;margin-bottom:0">Pro rychlou orientaci ve školeních následujte tyto štítky:</h2>
+        <div class="legend-grid">
+          <div class="legend-item"><span class="tag tag-keynote">Keynote</span><span>atraktivní téma hodící se také jako hlavní přednáška na vaši interní konferenci</span></div>
+          <div class="legend-item"><span class="tag tag-teambuilding">Teambuilding</span><span>potenciál na stmelení a sdílení</span></div>
+          <div class="legend-item"><span class="tag tag-fokus">Fokus</span><span>zacílené na boj s krizí pozornosti a schopnost se soustředit</span></div>
+          <div class="legend-item"><span class="tag tag-vykon">Výkon</span><span>pomáhá zvýšit produktivitu a efektivitu práce</span></div>
+          <div class="legend-item"><span class="tag tag-well-being">Well-being</span><span>snížení stresu, prevence vyhoření</span></div>
+          <div class="legend-item"><span class="tag tag-zivot">Život</span><span>přenositelné či přímo určené pro osobní život a volný čas</span></div>
+          <div class="legend-item"><span class="tag tag-fun">Fun</span><span>pobaví, protože se v tématu najde téměř každý</span></div>
+          <div class="legend-item"><span class="tag tag-signature">Signature</span><span>moje lektorská specializace a know-how</span></div>
+        </div>
+      </div>
+
+      <div class="block-jump" aria-label="Rychlé odkazy na bloky">
+        <a href="{{ root }}nabidka-skoleni/#blok-1">1 · Pracovní efektivita</a>
+        <a href="{{ root }}nabidka-skoleni/#blok-2">2 · Mentální hygiena</a>
+        <a href="{{ root }}nabidka-skoleni/#blok-3">3 · Návyky a změna chování</a>
+      </div>
+
+      <div class="filter-bar">
+        <p>Filtrovat témata podle štítků (kliknutím zapnete/vypnete):</p>
+        <div class="tags" id="filterTags">
+          <button class="tag tag-keynote filter" data-filter="keynote" aria-pressed="false">Keynote</button>
+          <button class="tag tag-teambuilding filter" data-filter="teambuilding" aria-pressed="false">Teambuilding</button>
+          <button class="tag tag-fokus filter" data-filter="fokus" aria-pressed="false">Fokus</button>
+          <button class="tag tag-vykon filter" data-filter="vykon" aria-pressed="false">Výkon</button>
+          <button class="tag tag-well-being filter" data-filter="well-being" aria-pressed="false">Well-being</button>
+          <button class="tag tag-zivot filter" data-filter="zivot" aria-pressed="false">Život</button>
+          <button class="tag tag-fun filter" data-filter="fun" aria-pressed="false">Fun</button>
+          <button class="tag tag-signature filter" data-filter="signature" aria-pressed="false">Signature</button>
+          <button class="tag filter" data-filter="__reset" style="background:#E3E8F2;color:var(--forest)">Zrušit filtr</button>
+        </div>
+        <p class="filter-count" id="filterCount" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-bottom:70px">
+    <div class="wrap">
+      <p class="no-results" id="noResults">Žádné téma neodpovídá zvolené kombinaci štítků — zkuste filtr uvolnit.</p>
+
+      <div class="topic-group" data-group="1">
+      <div class="topic-block-divider b1" id="blok-1">
+        <span class="divider-num">1</span>
+        <div class="divider-text">
+          <h2>Pracovní efektivita a produktivita</h2>
+          <p>4 témata o pozornosti, plánování a udržitelném pracovním tempu.</p>
+        </div>
+      </div>
+
+      <!-- 1 -->
+      <article class="topic b1" data-tags="fokus signature keynote">
+        <div class="topic-head">
+          <div><h2>Pozornost a soustředění</h2><span class="sub">v době informačního přetížení</span></div>
+          <div class="tags"><span class="tag tag-fokus">Fokus</span><span class="tag tag-signature">Signature</span><span class="tag tag-keynote">Keynote</span></div>
+        </div>
+        <p class="slogan">Zlepšete svou schopnost se plně soustředit, snižte míru vyrušení a zlepšete svou efektivitu.</p>
+        <p class="desc">V digitální době přestává být největším problémem nedostatek času na práci, ale neschopnost se na ni plně soustředit. Od práce nás odvádějí desítky forem vyrušení: od notifikací a nikdy nekončících e-mailů a chatů, přes kolegy v open-spacu až po vlastní neodbytné myšlenky. Může se zdát, že jinak se dnes pracovat nedá. Naštěstí existuje dostatek konkrétních kroků a opatření, kterými lze docílit kvalitnější práce charakteristické nejen vyšším výkonem, ale překvapivě také lépe prožívaným pracovním časem.</p>
+        <div class="quote-box"><p class="quote-text">„Schopnost pozornost záměrně a strategicky upínat ke konkrétním věcem je ve světě, kde nás něco neustále rozptyluje, konkurenční výhoda.“</p><p class="quote-author">Tiago Forte</p></div>
+        <div class="takeaways">
+          <h4>Účastníci si odnesou:</h4>
+          <ul>
+            <li><strong>Zvýšenou produktivitu a vyšší kvalitu výstupů</strong> díky lepšímu soustředění na klíčové úkoly a snížení fragmentace pozornosti.</li>
+            <li><strong>Efektivnější využití pracovního času</strong> se zaměřením na hluboké, hodnotné úseky práce a eliminaci neproduktivního přepínání mezi úkoly.</li>
+            <li><strong>Snížení mentální únavy a pracovního stresu</strong> prostřednictvím osvědčených postupů řízení pozornosti a nastavení pracovního rytmu.</li>
+            <li><strong>Praktické strategie pro redukci vnějších a vnitřních vyrušení</strong>, která aktuálně narušují koncentraci a rozhodovací procesy.</li>
+            <li><strong>Posílenou schopnost lépe rozhodovat</strong> a uvažovat kreativněji díky stabilnímu soustředění.</li>
+            <li><strong>Zlepšení týmové efektivity a komunikace</strong> díky společnému porozumění tomu, jak chránit vlastní pozornost a respektovat pozornost ostatních.</li>
+            <li><strong>Konkrétní nástroje a opatření k okamžité aplikaci</strong> — od nastavení pracovního prostředí až po pravidla pro notifikace a bloky pracovního času.</li>
+          </ul>
+        </div>
+        <div class="closing">Osvojte si dovednosti, které vám umožní nejen pracovat efektivněji, ale převzít skutečnou kontrolu nad svou pozorností a výkonem v dnešním světě plném rozptýlení.</div>
+      </article>
+
+      <!-- 2 -->
+      <article class="topic b1" data-tags="vykon fokus">
+        <div class="topic-head">
+          <div><h2>Plánování a systém práce</h2><span class="sub">v době nekonečných úkolů</span></div>
+          <div class="tags"><span class="tag tag-vykon">Výkon</span><span class="tag tag-fokus">Fokus</span></div>
+        </div>
+        <p class="slogan">Zlepšete svůj systém práce, zvyšte svou pracovní efektivitu a zvládněte nekonečný příval úkolů.</p>
+        <p class="desc">S rostoucím množstvím úkolů, které na sebe klademe, se často ocitáme na samotné hraně našich časových a mentálních kapacit, jejichž vlivem naše produktivita klesá — jakkoli neradi si to připouštíme. Time-management sice patří mezi populární klasická témata, ale každý den je v něm stále co zlepšovat, protože technologie a způsob práce se neustále vyvíjejí. Tento workshop vás naučí dívat se na celé téma plánování přívětivou optikou a paradoxně tak svou výkonnost ještě zvýšit.</p>
+        <div class="quote-box"><p class="quote-text">„Otázka není, jak stihnout vše, co je v plánu, ale jak dostat do plánu ty správné věci.“</p><p class="quote-author">Nir Eyal</p></div>
+        <div class="takeaways">
+          <h4>Účastníci si odnesou:</h4>
+          <ul>
+            <li><strong>Opatření, jak snižovat nepřehlednost v záplavě úkolů</strong>, zlepšovat soustředění a lépe chránit klíčové bloky práce.</li>
+            <li><strong>Návod, jak na týdenní plánování</strong>, které považuji za nejvíce podceňovaný nástroj plánování.</li>
+            <li><strong>Koncept denního plánování</strong>, který snižuje paralýzu z rozhodování, pomáhá pracovat s energií a omezuje neproduktivní přepínání mezi úkoly.</li>
+            <li><strong>Konkrétní metody prioritizace</strong>, aby bylo jasné, čemu věnovat primárně pozornost.</li>
+            <li><strong>Nástroje, jak se vyhnout či snížit pocit „nestíhání“</strong> a snížit negativní dopady multitaskingu.</li>
+            <li><strong>Postupy, jak svůj time-management pravidelně vylepšovat</strong> a vychytávat chyby.</li>
+            <li><strong>Pravidla, co patří do kalendáře a co do seznamů úkolů</strong>, aby plán odpovídal realitě a kapacitě.</li>
+          </ul>
+        </div>
+        <div class="closing">Posuňte vaše plánovací dovednosti na další úroveň, vylepšete svůj systém a dosáhněte lepší efektivity a produktivity, aniž byste se cítili vyčerpaní.</div>
+      </article>
+
+      <!-- 3 -->
+      <article class="topic b1" data-tags="signature fokus well-being keynote zivot">
+        <div class="topic-head">
+          <div><h2>Dopaminová střízlivost</h2><span class="sub">aneb jak se „neubavit k smrti“</span></div>
+          <div class="tags"><span class="tag tag-signature">Signature</span><span class="tag tag-fokus">Fokus</span><span class="tag tag-well-being">Well-being</span><span class="tag tag-keynote">Keynote</span><span class="tag tag-zivot">Život</span></div>
+        </div>
+        <p class="slogan">Získejte zpět chuť do práce i života tím, že se naučíte lépe zacházet se svým dopaminem — klíčovým palivem motivace a sebeovládání.</p>
+        <p class="desc">Žijeme v prostředí, kde je zábava, stimulace a rozptýlení dostupné nepřetržitě: telefon, notifikace, sítě, sladkosti, nakupování, zprávy. Náš mozek to vyhodnocuje jako snadnou odměnu — jenže čím častěji si ji bereme, tím hůř se pak soustředíme, rychleji se unavíme a víc se nám nechce do věcí, které jsou pro nás opravdu důležité.</p>
+        <p class="desc">Dopaminová střízlivost však neznamená zakazovat si jakoukoli radost. Znamená spíš návrat k rovnováze: umět rozlišit, kdy si dopamin užíváme zdravě v rámci skutečného odpočinku — a kdy ho jen bezmyšlenkovitě ždímeme.</p>
+        <div class="quote-box"><p class="quote-text">„S dopaminem si nezahrávejte. Umí se tvrdě bránit.“</p><p class="quote-author">Lieberman &amp; Long</p></div>
+        <div class="takeaways">
+          <h4>Účastníci si odnesou:</h4>
+          <ul>
+            <li><strong>Zlepšené soustředění, sníženou míru prokrastinace</strong> a větší stabilitu energie během dne — v práci i doma.</li>
+            <li><strong>Jasné porozumění tomu</strong>, proč se někdy „nemůžou dokopat“ a proč je snadné sklouznout k rozptýlení.</li>
+            <li><strong>Vlastní mapu spouštěčů a návykových smyček</strong> (kdy, proč a čím se typicky uklidňuji či odpojuji).</li>
+            <li><strong>Osobní „dopaminový semafor“</strong> a konkrétní rozhodnutí, co omezit a čím to nahradit.</li>
+            <li><strong>Praktická pravidla pro digitální hygienu</strong> bez přehnaných zákazů (notifikace, prostředí, časové bloky).</li>
+            <li><strong>Jednoduchý plán na první týden:</strong> malé kroky, které udělají velký rozdíl.</li>
+            <li><strong>Opatření, která pomohou zvýšit spokojenost a snížit stres</strong>, který se obvykle hromadí vlivem příliš velkého množství stimulů pro náš mozek.</li>
+          </ul>
+        </div>
+        <div class="closing">Osvojte si realistickou dopaminovou střídmost, díky které se budete méně rozptylovat, víc stíhat a znovu mít radost i z věcí, které jsou doopravdy důležité.</div>
+      </article>
+
+      <!-- 4 -->
+      <article class="topic b1" data-tags="fokus vykon signature">
+        <div class="topic-head">
+          <div><h2>Akademie: Udržitelná práce</h2><span class="sub">pracujte v přiměřeném tempu a přesto více efektivně</span></div>
+          <div class="tags"><span class="tag tag-fokus">Fokus</span><span class="tag tag-vykon">Výkon</span><span class="tag tag-signature">Signature</span></div>
+        </div>
+        <p class="slogan">Tato akademie propojuje tři předchozí klíčové oblasti do jednoho praktického systému: 1) pozornost, 2) plánování a 3) dopaminovou střídmost s cílem dosáhnout dlouhodobě udržitelného výkonu.</p>
+        <div class="quote-box"><p class="quote-text">„Schopnost pozornost záměrně a strategicky upínat ke konkrétním věcem je ve světě, kde nás něco neustále rozptyluje, konkurenční výhoda.“</p><p class="quote-author">Tiago Forte</p></div>
+        <div class="takeaways">
+          <h4>Akademie je pro lidi a týmy, které chtějí:</h4>
+          <ul>
+            <li><strong>Méně vyrušení</strong> a víc hluboké práce.</li>
+            <li><strong>Jasnější priority</strong> a funkční systém úkolů.</li>
+            <li><strong>Stabilnější energii</strong> a menší potřebu „utíkat“.</li>
+          </ul>
+          <h4 style="margin-top:10px">Jak akademie funguje:</h4>
+          <ul>
+            <li>Navazující série lekcí + jednoduché týdenní úkoly, které si účastníci hned zavádí do praxe.</li>
+            <li><strong>Důraz na realistické tempo</strong>, průběžné vyhodnocování a aplikaci poznatků do praxe.</li>
+            <li>Délka trvání: min. 4, max. 12 týdnů po lekcích v maximální délce 1,5–2 h.</li>
+          </ul>
+          <h4 style="margin-top:10px">K jakým proměnám dochází u účastníků:</h4>
+          <ul>
+            <li><strong>Méně přepínání, více klidu, lepší soustředění.</strong></li>
+            <li>Jasnější <strong>priority</strong> a plán, který odpovídá reálným kapacitám.</li>
+            <li>Konkrétní pravidla pro <strong>notifikace</strong>, komunikaci a <strong>ochranu bloků práce</strong>.</li>
+            <li><strong>Menší prokrastinace</strong> díky práci s dopaminovými spouštěči.</li>
+          </ul>
+        </div>
+        <div class="closing">Účastníci si z akademie odnesou jeden propojený systém, který jim pomůže pracovat soustředěně, plánovat realisticky a mít stabilní energii i v době nekonečných podnětů.</div>
+      </article>
+      </div>
+
+      <div class="topic-group" data-group="2">
+      <div class="topic-block-divider b2" id="blok-2">
+        <span class="divider-num">2</span>
+        <div class="divider-text">
+          <h2>Mentální hygiena</h2>
+          <p>3 témata o zvládání stresu, relaxaci a energii.</p>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <article class="topic b2" data-tags="vykon fokus teambuilding zivot well-being">
+        <div class="topic-head">
+          <div><h2>Umění relaxace</h2><span class="sub">klidné nervy i v době plné stresu</span></div>
+          <div class="tags"><span class="tag tag-vykon">Výkon</span><span class="tag tag-fokus">Fokus</span><span class="tag tag-teambuilding">Teambuilding</span><span class="tag tag-zivot">Život</span><span class="tag tag-well-being">Well-being</span></div>
+        </div>
+        <p class="slogan">Získejte praktický repertoár relaxačních technik, díky kterým se budete umět rychleji zklidnit, lépe regenerovat a dlouhodobě fungovat s menším vnitřním napětím.</p>
+        <p class="desc">Stres se dnes většinou netýká jen jedné špatné události, ale základních charakteristik moderního života: hlava stále „jede“, tělo je v pohotovosti, pozornost se tříští o desítky každodenních úkolů a večer pak z toho člověk neumí „vypnout“.</p>
+        <p class="desc">Přitom schopnost se zklidnit není jen výlučně věcí temperamentu, ani okolností, jež nás obklopují. Je to dovednost, kterou lze trénovat. Meditace a mindfulness toto téma také pokrývá, ale ne dominantně.</p>
+        <div class="quote-box"><p class="quote-text">„Čas na odpočinek je tehdy, když na něj nemáte čas.“</p><p class="quote-author">Sydney J. Harris</p></div>
+        <div class="takeaways">
+          <h4>Účastníci si odnesou:</h4>
+          <ul>
+            <li><strong>Schopnost rychleji zklidnit nervový systém</strong> v náročné situaci a snížit tělesné napětí.</li>
+            <li><strong>Praktickou sadu různých relaxačních technik</strong> (krátkých i delších), aby relaxace nebyla závislá na náladě nebo ideálních podmínkách.</li>
+            <li><strong>Lepší porozumění vlastní stresové reakci</strong> a jasné signály, kdy už je potřeba brzdit a jak na to.</li>
+            <li><strong>Konkrétní mikro-návyky pro průběžnou regeneraci</strong> během pracovního dne, bez ztráty výkonu.</li>
+            <li><strong>Snížení mentální únavy a zlepšení kvality spánku</strong> díky lepšímu vypínání a večernímu zklidnění.</li>
+            <li><strong>Realistický plán, jak techniky zavést do života tak</strong>, aby se udržely i v hektickém období.</li>
+            <li><strong>Dlouhodobě vyšší odolnost:</strong> méně „přepětí“, rychlejší návrat do klidu, stabilnější energie.</li>
+          </ul>
+        </div>
+        <div class="closing">Naučte se relaxovat tak, aby zklidnění nebyla jen náhoda, ale dovednost, kterou umíte využít kdykoli je to třeba.</div>
+      </article>
+
+      <!-- 6 -->
+      <article class="topic b2" data-tags="vykon zivot well-being">
+        <div class="topic-head">
+          <div><h2>Energie a výkon v rovnováze</h2><span class="sub">aneb tělo jako baterie</span></div>
+          <div class="tags"><span class="tag tag-vykon">Výkon</span><span class="tag tag-zivot">Život</span><span class="tag tag-well-being">Well-being</span></div>
+        </div>
+        <p class="slogan">Naučte se pracovat se svou energií tak, abyste nadále podávali vysoký výkon, ale neměli u toho pořád pocit, že jedete na rezervu.</p>
+        <p class="desc">Kombinace přebytku úkolů a nedostatku času není sama o sobě hlavní příčinou vyčerpání či vyhoření. Podstatou problému je neschopnost regulovat a respektovat kapacitu našeho nervového systému. Když se pomyslná baterie našeho organismu nepřiměřeně rychle vybíjí, je potřeba zakročit.</p>
+        <p class="desc">Na tomto školení rozpoznáte své největší žrouty energie, dozvíte se, jak je omezit a nastavit si návyky, které váš výkon přiblíží dlouhodobě udržitelnému optimu.</p>
+        <div class="quote-box"><p class="quote-text">„Stejně jako potřebujeme cvičení, jídlo, odpočinek a spánek, potřebujeme též momenty vnitřního ticha, protože přinášejí nejhlubší druh občerstvení.“</p><p class="quote-author">Thomas Keating</p></div>
+        <div class="takeaways">
+          <h4>Účastníci si odnesou:</h4>
+          <ul>
+            <li><strong>Porozumění tomu, co energii nejčastěji bere</strong> a jakým mechanismem pak dochází k poklesu výkonu.</li>
+            <li><strong>Praktický postup, jak během dne udržet stabilní kapacitu</strong> a nepřepínat se do vyčerpání.</li>
+            <li>Konkrétní mikro-techniky <strong>pro rychlé zklidnění a dobití</strong> (během práce, mezi meetingy, po náročných interakcích).</li>
+            <li><strong>Co je to pracovní rytmus a jak si nastavit ten svůj</strong> s respektem vůči vlastním povinnostem a závazkům.</li>
+            <li>Doporučení pro <strong>nastavení prostředí a návyků</strong>, které podporují dlouhodobou výkonnost a prevenci vyhoření.</li>
+            <li><strong>Pochopení automatické stresové reakce</strong>, celkově biologické podstaty našeho organismu a cirkadiánního rytmu.</li>
+          </ul>
+        </div>
+        <div class="closing">Začněte předvídat a řídit svou energii stejně vědomě jako čas a dosáhněte pracovního výkonu, který je udržitelný také v dlouhodobém horizontu.</div>
+      </article>
+
+      <!-- 7 -->
+      <article class="topic b2" data-tags="zivot fokus vykon well-being">
+        <div class="topic-head">
+          <div><h2>Fenomén mindfulness</h2><span class="sub">aneb všímavost a meditace prakticky a srozumitelně</span></div>
+          <div class="tags"><span class="tag tag-zivot">Život</span><span class="tag tag-fokus">Fokus</span><span class="tag tag-vykon">Výkon</span><span class="tag tag-well-being">Well-being</span></div>
+        </div>
+        <p class="slogan">Pochopte podstatu mindfulness bez zbytečné mystiky a naučte se trénovat nepostradatelný nástroj pro člověka 21. století.</p>
+        <p class="desc">Mnoho z nás jede od rána do noci na autopilota, kterého by často rádi vypnuli, ale neví, jak na to. Ocitáme se tak ve vleku emocí a myšlenek, se kterými si nevíme rady. Spokojenost klesá, frustrace roste, nadhled se ztrácí.</p>
+        <p class="desc">Co kdybychom své prožívání mohli lépe regulovat, nechat se méně rozptylovat okolními vlivy, vlastními rušivými myšlenkami a umět včas rozpoznat, co se v nás odehrává?</p>
+        <div class="quote-box"><p class="quote-text">„Meditace je jedním z účinných způsobů, jak zvrátit odvěký a narůstající trend rozptylování.“</p><p class="quote-author">Cortland Dahl</p></div>
+        <div class="takeaways">
+          <h4>Účastníci si odnesou:</h4>
+          <ul>
+            <li><strong>Jasné pochopení, jak mindfulness funguje</strong> a proč pomáhá i „nemeditujícím“ lidem.</li>
+            <li><strong>Vědecký a neurologický podklad</strong>, na jehož bázi mindfulness funguje.</li>
+            <li><strong>Srozumitelné vymezení pojmů</strong> meditace vs. mindfulness.</li>
+            <li><strong>Praktické techniky pro rychlé zklidnění</strong> a návrat k soustředění kdykoli během dne.</li>
+            <li><strong>Schopnost dřív rozpoznat stresovou reakci</strong> a nevjet automaticky do zbytečných konfliktů či únikových reakcí.</li>
+            <li><strong>Konkrétní způsoby, jak mindfulness propojit s prací, komunikací</strong> i rozhodováním.</li>
+            <li><strong>Větší mentální lehkost:</strong> méně zahlcení, více prostoru, lepší práce s vlastními myšlenkami.</li>
+          </ul>
+        </div>
+        <div class="closing">Mindfulness není únikem z tvrdé reality — je to způsob, jak ji zvládat s větším klidem a nadhledem.</div>
+      </article>
+
+      </div>
+
+      <div class="topic-group" data-group="3">
+      <div class="topic-block-divider b3" id="blok-3">
+        <span class="divider-num">3</span>
+        <div class="divider-text">
+          <h2>Návyky a změna chování</h2>
+          <p>3 témata o budování udržitelných návyků a opouštění zlozvyků.</p>
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <article class="topic b3" data-tags="fun zivot signature">
+        <div class="topic-head">
+          <div><h2>Udržitelná změna</h2><span class="sub">realistická cesta za sebedisciplínou a návyky</span></div>
+          <div class="tags"><span class="tag tag-fun">Fun</span><span class="tag tag-zivot">Život</span><span class="tag tag-signature">Signature</span></div>
+        </div>
+        <p class="slogan">Vybudujte skutečnou vytrvalost a konzistenci v návycích i osobním rozvoji bez přepálených začátků.</p>
+        <p class="desc">Začít umí každý, ale vydržet dokáže málokdo. Po nadšeném startu často přichází pád a hned po něm výčitky. Poznáváte se? Udržitelná změna však nestojí a nepadá s heroickou vůlí, ale rozhoduje o ní chytré nastavení prostředí, realistická laťka a schopnost udělat po selhání „restart“ bez zbytečného odkládání.</p>
+        <p class="desc">Stát se konzistentním a vytrvalým člověkem může každý — ale vyžaduje to pochopit několik klíčových principů a korigovat svá očekávání. Sebedisciplína je velice málo o vojenském drilu a mnohem více o sebelaskavosti.</p>
+        <div class="quote-box"><p class="quote-text">„Lidé se mění nejlíp, když se cítí dobře — ne když se bičují.“</p><p class="quote-author">BJ Fogg</p></div>
+        <div class="takeaways">
+          <h4>Účastníci si odnesou:</h4>
+          <ul>
+            <li>Jak nastavit <strong>realistickou laťku</strong>, která neodradí a umožní udržet frekvenci.</li>
+            <li><strong>Konkrétní doporučení na rychlost udržitelného tempa</strong> návyků a praktické příklady.</li>
+            <li><strong>Jak pracovat s odporem a prokrastinací:</strong> co dělat v momentě, kdy se „nechce“.</li>
+            <li><strong>Prostředí a rituály:</strong> jak zařídit, aby „správná volba“ byla jednodušší než cesta nejmenšího odporu.</li>
+            <li><strong>Detailní porozumění problematice rozhodovací paralýzy</strong> a implementačního záměru.</li>
+            <li><strong>Jasný postup, jak držet směr i ve dnech, kdy motivace kolísá.</strong></li>
+            <li>Praktické strategie, jak odolávat pokušením dřív, než vás stáhnou.</li>
+          </ul>
+        </div>
+        <div class="closing">Změnit se, když chcete nebo potřebujete — to je cíl tohoto školení. Změna vůbec nemusí bolet, ale jen pokud dokážete dodržet několik pravidel.</div>
+      </article>
+
+      <!-- 10 -->
+      <article class="topic b3" data-tags="zivot keynote fun teambuilding">
+        <div class="topic-head">
+          <div><h2>Opustit neřesti</h2><span class="sub">jak přemýšlet nad opouštěním zlozvyků</span></div>
+          <div class="tags"><span class="tag tag-zivot">Život</span><span class="tag tag-keynote">Keynote</span><span class="tag tag-fun">Fun</span><span class="tag tag-teambuilding">Teambuilding</span></div>
+        </div>
+        <p class="slogan">Celá řada zlozvyků a drobných či větších závislostí nevzniká nutně proto, že jsme slabí či že máme slabou vůli. Formoval je dlouhodobý proces učení a podobným mechanismem se lze mnohé rovněž odnaučit.</p>
+        <p class="desc">Má to však svá pravidla — a daleko víc, než vůli — to chce čas a trpělivost. Je potřeba naučit náš mozek nové smyčky návyků. A zohledňovat, že právě únava, stres a přetížení naši snahu o změnu často sabotují.</p>
+        <p class="desc">Dobrá zpráva však je, racionální pochopení problematiky může nesmírně pomoct. Když pochopíte, jak konkrétně vás zlozvyk drží, můžete mu začít brát sílu — chytrou prací se spouštěči, prostředím, náhradami a realistickým plánem, který počítá i se zakolísáním, aniž by cokoli z toho byl návrat na začátek.</p>
+        <div class="quote-box"><p class="quote-text">„Uniká nám, že neustále hledat potěšení a vyhýbat se bolesti je jako pít slanou vodu. Možná na chvíli unikneme svému nepohodlí, ale nevydrží to.“</p><p class="quote-author">Cortland Dahl</p></div>
+        <div class="takeaways">
+          <h4>Účastníci si odnesou:</h4>
+          <ul>
+            <li><strong>Pochopení problematiky vůle</strong>, která je mnohdy přeceňovaná, a proč v jejím posílení neleží řešení zlozvyků.</li>
+            <li><strong>Jasné pojmenování své návykové smyčky</strong> a konkrétních spouštěčů.</li>
+            <li><strong>Praktické strategie, jak zlozvyk „oslabit“</strong> úpravou prostředí a režimu.</li>
+            <li><strong>Funkční plán náhradního chování</strong> pro rizikové situace (stres, večer, nuda).</li>
+            <li><strong>Porozumění, jak pracovat s chutěmi a impulzy:</strong> jak ustát vlnu bažení (např. po sladkém).</li>
+            <li><strong>Přístup a dovednost „restartu“ místo perspektivy selhání:</strong> jak se vracet zpět bez výčitek a dramatu.</li>
+            <li><strong>Techniku pro práci s relapsem:</strong> jak z jednoho uklouznutí neudělat návrat ke starému režimu.</li>
+          </ul>
+        </div>
+        <div class="closing">Naučte se opouštět své zlozvyky tak, aby vám to vydrželo navždy. Pochopte limity vůle a s pomocí systému se staňte vytouženou verzí sebe sama.</div>
+      </article>
+
+      <!-- 11 -->
+      <article class="topic b3" data-tags="fun zivot signature">
+        <div class="topic-head">
+          <div><h2>Odložit mobil a žít</h2><span class="sub">vymaňte se z otroctví digitálního obsahu</span></div>
+          <div class="tags"><span class="tag tag-fun">Fun</span><span class="tag tag-zivot">Život</span><span class="tag tag-signature">Signature</span></div>
+        </div>
+        <p class="slogan">Technologie tady mají být pro nás, ne naopak. Získejte zpět svou pozornost, čas i vnitřní klid — bez návratu do doby kamenné.</p>
+        <p class="desc">Mobil je dnes všechno v jednom: práce, zábava, informace, kontakt s lidmi. Což je vysoce praktické, ale ještě víc návykové. Saháme po něm obvykle bezmyšlenkovitě, abychom se o pár (někdy i desítek) minut později probrali o něco více unavení, navíc s pocitem promarněného času.</p>
+        <p class="desc">Na školení vysvětlím, proč je digitální obsah tak přitažlivý, jak fungují smyčky odměn za konzumování obsahu a proč vůlí nad sociálními médii obvykle nejde zvítězit. Cílem není žít zcela bez mobilu či sítí, ale omezit jejich negativní dopady v běžném životě.</p>
+        <div class="quote-box"><p class="quote-text">„Lidé podléhají kouzlu obrazovek ne pro svou vrozenou lenost, ale protože se do dosažení tohoto účinku investovaly miliardy dolarů.“</p><p class="quote-author">Cal Newport</p></div>
+        <div class="takeaways">
+          <h4>Účastníci si odnesou:</h4>
+          <ul>
+            <li><strong>Pochopení, jak pracovat s nutkáním</strong> brát telefon bezmyšlenkovitě do ruky.</li>
+            <li><strong>Rozbor a zamyšlení</strong>, čím smysluplným nahradit scrollování a jak si znovu nastavit život, který chcete žít.</li>
+            <li><strong>Praktické aplikace přístupů jako odložení uspokojení</strong> (delay of gratification) či surfování na vlně (surf the urge).</li>
+            <li><strong>Větší pocit svobody:</strong> víc času, víc pozornosti a víc přítomnosti ve vztazích i v práci.</li>
+            <li><strong>Konkrétní nastavení telefonu a jednoduchá pravidla</strong>, která okamžitě sníží vyrušení.</li>
+            <li><strong>Strategie pro večer:</strong> méně stimulace, více klidu, lepší usínání a ráno bez automatického scrollu.</li>
+            <li><strong>Pochopení problematiky dopaminu</strong> a jeho vlivu na formování závislostí na sítích u dospělých i dětí.</li>
+          </ul>
+        </div>
+        <div class="closing">Ať už se jedná o sociální sítě, hry či e-maily, na tomto školení se naučíte, jak omezit negativní dopady a ponechat si pouze benefity, které mobil bezesporu přináší.</div>
+      </article>
+      </div>
+
+      <div class="bg-forest" style="border-radius:var(--radius);padding:52px 46px;margin-top:14px;text-align:center">
+        <h2 style="margin-bottom:10px">Nezávazná poptávka</h2>
+        <p style="opacity:.9;max-width:52ch;margin:0 auto 26px">Zaujalo vás některé z témat? Napište mi — společně vybereme formát i obsah přesně pro váš tým.</p>
+        <a href="{{ root }}kontakt/" class="btn btn-primary">Kontaktovat Lukáše</a>
+      </div>
+    </div>
+  </section>
+{% endblock %}

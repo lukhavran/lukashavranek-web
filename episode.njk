@@ -1,0 +1,81 @@
+{% extends "base.njk" %}
+
+{% block jsonld %}
+<script type="application/ld+json">
+{{ jsonld | safe }}
+</script>
+{% endblock %}
+
+{% block main %}
+  <section class="ep-header">
+    <div class="wrap">
+      <a href="{{ root }}podcast/" class="ep-back">← Všechny epizody</a>
+      <p class="ep-tagline-logo"><img src="{{ root }}assets/img/rezonance-orange.png" alt="Rezonance" width="989" height="120"><span>· epizoda {{ episode }}</span></p>
+      <h1 style="font-size:clamp(1.7rem,3.6vw,2.4rem)">{{ title }}</h1>
+      {%- if subtitle %}
+      <p class="sub" style="margin-top:10px">{{ subtitle }}</p>
+      {%- endif %}
+      {%- if duration_min %}
+      <p style="font-size:.82rem;opacity:.65;margin-top:12px">Délka přibližně {{ duration_min | minutes }}</p>
+      {%- endif %}
+    </div>
+  </section>
+
+  <section class="block tight">
+    <div class="wrap">
+      <div class="ep-player">
+{%- if platform == 'spotify' %}
+        <iframe src="https://open.spotify.com/embed/episode/{{ media_id }}" title="Rezonance — {{ title }}" style="aspect-ratio:auto;height:180px" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+{%- else %}
+        <iframe src="https://www.youtube-nocookie.com/embed/{{ media_id }}" title="Rezonance — {{ title }}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+        <noscript><p style="text-align:center"><a href="https://www.youtube.com/watch?v={{ media_id }}" target="_blank" rel="noopener">Přehrát epizodu na YouTube ↗</a></p></noscript>
+{%- endif %}
+      </div>
+    </div>
+  </section>
+
+  <section class="block" style="padding-top:20px">
+    <div class="wrap ep-content">
+      {%- if lead %}
+      <p class="lead">{{ lead }}</p>
+      {%- endif %}
+
+      {{ content | safe }}
+
+      {%- if chapters and chapters.length and platform != 'spotify' %}
+
+      <h2>Kapitoly</h2>
+      <ul class="ep-chapters">
+        {%- for c in chapters %}
+        <li><a href="https://www.youtube.com/watch?v={{ media_id }}&amp;t={{ c.time | seconds }}s" target="_blank" rel="noopener"><span class="ep-time">{{ c.time }}</span><span>{{ c.label }}</span></a></li>
+        {%- endfor %}
+      </ul>
+      {%- endif %}
+
+      {%- if platform != 'spotify' or (links and links.length) %}
+
+      <h2>Zmíněné odkazy</h2>
+      <div class="ep-links">
+        {%- if platform != 'spotify' %}
+        <a href="https://www.youtube.com/watch?v={{ media_id }}" target="_blank" rel="noopener">Epizoda na YouTube ↗</a>
+        {%- endif %}
+        {%- for l in links %}
+        <a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }} ↗</a>
+        {%- endfor %}
+      </div>
+      {%- endif %}
+      {%- if links_note %}
+      <p style="font-size:.85rem;opacity:.75;margin-top:14px">{{ links_note | mdInline | safe }}</p>
+      {%- endif %}
+
+      <div class="blog-note" style="margin-top:36px">
+        Zaujalo vás téma? Podívejte se na <a href="{{ root }}nabidka-skoleni/">nabídku školení</a> nebo mi rovnou <a href="{{ root }}kontakt/">napište</a>.
+      </div>
+
+      <div class="ep-nav">
+        <a href="{{ root }}podcast/" class="btn btn-ghost">← Všechny epizody</a>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

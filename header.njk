@@ -1,0 +1,16 @@
+<header>
+  <nav class="wrap nav" aria-label="Hlavní navigace">
+    <a href="{{ root or './' }}" class="wordmark" aria-label="Lukáš Havránek — úvodní stránka"><img src="{{ root }}assets/img/wordmark-dark.png" alt="Lukáš Havránek" width="1113" height="120"></a>
+    <button class="burger" id="burger" aria-label="Otevřít menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="{{ root or './' }}"{% if nav == 'home' %} class="active" aria-current="page"{% endif %}>Home</a></li>
+      <li><a href="{{ root }}o-mne/"{% if nav == 'o-mne' %} class="active" aria-current="page"{% endif %}>O mně</a></li>
+      <li><a href="{{ root }}nabidka-skoleni/"{% if nav == 'nabidka' %} class="active" aria-current="page"{% endif %}>Nabídka školení</a></li>
+      <li><a href="{{ root }}blog/"{% if nav == 'blog' %} class="active" aria-current="page"{% endif %}>Blog</a></li>
+      <li><a href="{{ root }}podcast/"{% if nav == 'podcast' %} class="active" aria-current="page"{% endif %}>Podcast</a></li>
+      <li><a href="{{ root }}kontakt/" class="nav-cta{% if nav == 'kontakt' %} active{% endif %}"{% if nav == 'kontakt' %} aria-current="page"{% endif %}>Kontakt</a></li>
+    </ul>
+  </nav>
+</header>

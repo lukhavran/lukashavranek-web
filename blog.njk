@@ -1,0 +1,46 @@
+---
+permalink: "/blog/"
+nav: "blog"
+title: "Blog o pozornosti, návycích a energii | Lukáš Havránek"
+description: "Články Lukáše Havránka o soustředění, budování návyků, plánování a práci s energií. Prakticky, srozumitelně a s oporou ve výzkumech."
+og_description: "Prakticky a srozumitelně o soustředění, dopaminu, plánování a mentální hygieně. Bez mystiky, s oporou v odborných zdrojích."
+og_type: "website"
+---
+{% extends "base.njk" %}
+
+{% block main %}
+
+  <section class="block">
+    <div class="wrap">
+      <span class="eyebrow">Blog</span>
+      <h1 style="font-size:clamp(1.9rem,4vw,2.6rem)">Články o pozornosti, návycích a energii</h1>
+      <p class="sub" style="margin-top:8px">Stručně, prakticky, srozumitelně.</p>
+
+      <div class="blog-grid">
+{%- for a in collections.articles %}{% set d = a.data %}
+        <article class="blog-card">
+          {%- if d.external_url %}
+          <a href="{{ d.external_url }}" class="card-link" target="_blank" rel="noopener">
+          {%- else %}
+          <a href="{{ a.fileSlug }}/" class="card-link">
+          {%- endif %}
+            <span class="cat cat-{{ d.category }}">{{ categories[d.category] }}</span>
+            <h2>{{ d.title }}</h2>
+            <p>{{ d.summary }}</p>
+            {%- if d.external_url %}
+            <span class="meta">Číst na blogu {{ d.source or 'GrowJOB' }} <span class="arrow" aria-hidden="true">↗</span></span>
+            {%- else %}
+            <span class="meta">Číst článek <span class="arrow" aria-hidden="true">→</span></span>
+            {%- endif %}
+          </a>
+        </article>
+{%- endfor %}
+      </div>
+
+      <div class="blog-note">
+        <strong>Poznámka:</strong> články jsem psal pro vzdělávací institut <a href="https://www.growjob.com/blog/" target="_blank" rel="noopener">GrowJOB</a>, se kterým dlouhodobě spolupracuji, a otevírají se na jeho webu. Vlastní články sem budu přidávat průběžně.
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

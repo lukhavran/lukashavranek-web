@@ -1,0 +1,15 @@
+{
+  "name": "lukashavranek-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Web Lukáše Havránka — Eleventy + Sveltia CMS",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "js-yaml": "^5.4.3",
+    "markdown-it": "^15.0.2"
+  }
+}

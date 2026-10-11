@@ -1,0 +1,71 @@
+---
+permalink: "/kontakt/"
+nav: "kontakt"
+title: "Kontakt — nezávazná poptávka školení | Lukáš Havránek"
+description: "Poptejte firemní školení nebo workshop. Téma i formu přizpůsobím kontextu vaší firmy. Odpovídám na lukas@lukashavranek.cz."
+og_title: "Kontakt — nezávazná poptávka školení | Lukáš Havránek"
+og_description: "Poptejte firemní školení nebo workshop. Téma i formu přizpůsobím kontextu vaší firmy. Odpovídám na lukas@lukashavranek.cz."
+og_type: "website"
+theme_color: "#0E1E38"
+---
+{% extends "base.njk" %}
+{% block jsonld %}{% raw %}<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://www.lukashavranek.cz/#lukas",
+  "name": "Ing. Lukáš Havránek",
+  "jobTitle": "Lektor osobního rozvoje",
+  "description": "Lektor se zaměřením na pozornost, sebedisciplínu, mindfulness a udržitelnou pracovní výkonnost. B2B školení pro firmy od roku 2010.",
+  "email": "lukas@lukashavranek.cz",
+  "url": "https://www.lukashavranek.cz/",
+  "address": {"@type": "PostalAddress", "streetAddress": "Erenburgova 204/3", "postalCode": "779 00", "addressLocality": "Olomouc", "addressCountry": "CZ"},
+  "sameAs": ["https://www.instagram.com/lukhavran", "https://www.facebook.com/lukas.havranek.official", "https://www.youtube.com/@lukhavran", "https://www.linkedin.com/in/lukashavranek/"],
+  "knowsLanguage": ["cs", "en"],
+  "memberOf": {"@type": "Organization", "name": "GrowJOB s.r.o."}
+}
+</script>{% endraw %}{% endblock %}
+{% block main %}
+
+  <section class="block">
+    <div class="wrap contact-grid">
+      <div>
+        <span class="eyebrow">Kontakt</span>
+        <h1 style="font-size:clamp(1.9rem,4vw,2.6rem)">Nezávazná poptávka školení</h1>
+        <p style="margin-top:14px">Napište mi, co vaše firma či tým řeší. Ozvu se zpět s návrhem tématu, formátu a termínu.</p>
+        <ul style="list-style:none;margin-top:26px;font-size:.95rem;line-height:2">
+          <li><strong>E-mail:</strong> <a href="mailto:lukas@lukashavranek.cz">lukas@lukashavranek.cz</a></li>
+          <li><strong>E-mail (GrowJOB):</strong> <a href="mailto:lukas.havranek@growjob.com">lukas.havranek@growjob.com</a></li>
+          <li><strong>Instagram:</strong> <a href="https://instagram.com/lukhavran" target="_blank" rel="noopener">@lukhavran</a></li>
+          <li><strong>Facebook:</strong> <a href="https://facebook.com/lukas.havranek.official" target="_blank" rel="noopener">@lukas.havranek.official</a></li>
+          <li><strong>YouTube:</strong> <a href="https://www.youtube.com/@lukhavran" target="_blank" rel="noopener">@lukhavran</a></li>
+          <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/lukashavranek/" target="_blank" rel="noopener">lukashavranek</a></li>
+        </ul>
+        <div style="background:var(--mint-light);border-radius:16px;padding:24px 26px;margin-top:30px;font-size:.85rem;line-height:1.8">
+          <strong style="font-style:italic;color:var(--forest)">Fakturační údaje</strong><br>
+          Ing. Lukáš Havránek · IČO: 74769286 · DIČ: CZ8709206000<br>
+          Erenburgova 204/3, 779 00 Olomouc · plátce DPH<br><br>
+          GrowJOB s.r.o. · IČ: 28310888 · DIČ: CZ28310888<br>
+          Šumavská 416/15, 602 00 Brno<br>
+          <span style="opacity:.7">Zapsaná v obchodním rejstříku vedeném Krajským soudem v Brně, oddíl C, vložka 60453</span>
+        </div>
+      </div>
+      <div>
+        <form data-contact-form novalidate action="https://formsubmit.co/lukas@lukashavranek.cz" method="POST">
+          <input type="hidden" name="_subject" value="Poptávka školení z webu">
+          <input type="hidden" name="_captcha" value="true">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+          <div class="row">
+            <div class="field"><label for="k-jmeno">Jméno</label><input type="text" id="k-jmeno" name="jmeno" autocomplete="given-name"></div>
+            <div class="field"><label for="k-prijmeni">Příjmení</label><input type="text" id="k-prijmeni" name="prijmeni" autocomplete="family-name"></div>
+          </div>
+          <div class="field"><label for="k-email">E-mail *</label><input type="email" id="k-email" name="email" required autocomplete="email"><span class="err-msg">Vyplňte prosím platný e-mail.</span></div>
+          <div class="field"><label for="k-predmet">Předmět *</label><input type="text" id="k-predmet" name="predmet" required><span class="err-msg">Vyplňte prosím předmět zprávy.</span></div>
+          <div class="field"><label for="k-zprava">Zpráva *</label><textarea id="k-zprava" name="zprava" rows="6" required></textarea><span class="err-msg">Napište prosím zprávu.</span></div>
+          <button type="submit" class="btn btn-primary">Odeslat</button>
+          <div class="form-success" role="status">Děkuji za zprávu! Ozvu se vám co nejdříve.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+{% endblock %}

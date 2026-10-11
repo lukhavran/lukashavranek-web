@@ -1,0 +1,81 @@
+---
+permalink: "/podcast/"
+nav: "podcast"
+title: "Podcast Rezonance — Lukáš Havránek"
+description: "Rezonance — podcast Lukáše Havránka o pozornosti, sebedisciplíně, návycích a udržitelné práci v digitální době. Poslechněte si nové epizody."
+theme_color: "#FF5D01"
+og_type: "website"
+---
+{% extends "base.njk" %}
+
+{# Obrázek pro sdílení = obrázek nejnovější epizody #}
+{% block social_image %}{% set latest = collections.episodes[0] %}{% if latest and latest.data.og_image %}
+<meta property="og:image" content="{{ latest.data.og_image }}">
+<meta name="twitter:card" content="summary_large_image">
+{%- endif %}{% endblock %}
+
+{% block jsonld %}{% raw %}<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "PodcastSeries",
+  "name": "Rezonance",
+  "description": "Podcast Lukáše Havránka o pozornosti, sebedisciplíně, návycích a udržitelné práci v digitální době.",
+  "url": "https://www.lukashavranek.cz/podcast/",
+  "author": {"@type": "Person", "name": "Lukáš Havránek"}
+}
+</script>{% endraw %}{% endblock %}
+
+{% block main %}
+  <section class="pod-hero">
+    <div class="wrap">
+      <span class="eyebrow">Podcast</span>
+      <h1><img class="pod-logo" src="{{ root }}assets/img/rezonance-pale.png" alt="Rezonance" width="989" height="120"></h1>
+      <p class="sub" style="font-size:1.08rem;margin-top:14px;max-width:52ch">{{ podcast.intro }}</p>
+      <div class="pod-sub">
+        {%- if podcast.youtube_url %}
+        <a href="{{ podcast.youtube_url }}" target="_blank" rel="noopener" aria-label="Sledovat na YouTube">YouTube ↗</a>
+        {%- endif %}
+        {%- if podcast.spotify_url %}
+        <a href="{{ podcast.spotify_url }}" target="_blank" rel="noopener" aria-label="Poslouchat na Spotify">Spotify ↗</a>
+        {%- endif %}
+        {%- if podcast.apple_url %}
+        <a href="{{ podcast.apple_url }}" target="_blank" rel="noopener" aria-label="Poslouchat na Apple Podcasts">Apple Podcasts ↗</a>
+        {%- endif %}
+      </div>
+      {%- if podcast.note %}
+      <p style="font-size:.78rem;opacity:.7;margin-top:14px">{{ podcast.note }}</p>
+      {%- endif %}
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <h2>Epizody</h2>
+      <div class="ep-list">
+{% for ep in collections.episodes %}{% set e = ep.data %}
+        <article class="ep-card">
+          <a href="{{ ep.fileSlug }}/">
+            <span class="ep-thumb"{% if not e.thumb %} style="aspect-ratio:16/9"{% endif %}>
+              {%- if e.thumb %}
+              <picture>
+                {%- if e.image and (e.image | webpSibling) %}
+                <source srcset="{{ e.image | webpSibling | assetUrl(root) }}" type="image/webp">
+                {%- endif %}
+                <img src="{{ e.thumb | assetUrl(root) }}" alt="Rezonance — epizoda {{ e.title }}" width="1280" height="720" loading="lazy">
+              </picture>
+              {%- endif %}
+              <span class="ep-num">{{ e.episode }}</span>
+            </span>
+            <div class="ep-body">
+              <h2>{{ e.title }}</h2>
+              <p>{{ e.card_text or e.description }}</p>
+              <div class="ep-meta">{% if e.duration_min %}<span>cca {{ e.duration_min }} min</span><span>·</span>{% endif %}<span>{{ e.platform_label }}</span></div>
+            </div>
+          </a>
+        </article>
+{% endfor %}
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

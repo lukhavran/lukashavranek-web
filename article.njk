@@ -1,0 +1,42 @@
+{% extends "base.njk" %}
+
+{% block jsonld %}
+<script type="application/ld+json">
+{{ jsonld | safe }}
+</script>
+{% endblock %}
+
+{% block main %}
+  <section class="ep-header">
+    <div class="wrap">
+      <a href="{{ root }}blog/" class="ep-back">← Všechny články</a>
+      {%- if category %}
+      <p class="ep-tagline">{{ categories[category] }}</p>
+      {%- endif %}
+      <h1 style="font-size:clamp(1.7rem,3.6vw,2.4rem)">{{ title }}</h1>
+      <p class="sub" style="margin-top:10px">{{ summary }}</p>
+      {%- if date %}
+      <p style="font-size:.82rem;opacity:.65;margin-top:12px">{{ date | dateCz }}</p>
+      {%- endif %}
+    </div>
+  </section>
+
+  <section class="block" style="padding-top:36px">
+    <div class="wrap ep-content">
+      {%- if image %}
+      <div class="ep-cover"><img src="{{ image | assetUrl(root) }}" alt="{{ image_alt or title }}" loading="lazy"></div>
+      {%- endif %}
+
+      {{ content | safe }}
+
+      <div class="blog-note" style="margin-top:36px">
+        Zaujalo vás téma? Podívejte se na <a href="{{ root }}nabidka-skoleni/">nabídku školení</a> nebo mi rovnou <a href="{{ root }}kontakt/">napište</a>.
+      </div>
+
+      <div class="ep-nav">
+        <a href="{{ root }}blog/" class="btn btn-ghost">← Všechny články</a>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
