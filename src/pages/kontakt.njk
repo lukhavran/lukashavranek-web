@@ -51,10 +51,10 @@ theme_color: "#0E1E38"
         </div>
       </div>
       <div>
-        <form data-contact-form novalidate action="https://formsubmit.co/lukas@lukashavranek.cz" method="POST">
-          <input type="hidden" name="_subject" value="Poptávka školení z webu">
-          <input type="hidden" name="_captcha" value="true">
-          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <form data-contact-form novalidate name="poptavka-kontakt" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="poptavka-kontakt">
+          <input type="hidden" name="subject" value="Poptávka školení z webu">
+          <p hidden><label>Nevyplňujte: <input type="text" name="bot-field" tabindex="-1" autocomplete="off"></label></p>
           <div class="row">
             <div class="field"><label for="k-jmeno">Jméno</label><input type="text" id="k-jmeno" name="jmeno" autocomplete="given-name"></div>
             <div class="field"><label for="k-prijmeni">Příjmení</label><input type="text" id="k-prijmeni" name="prijmeni" autocomplete="family-name"></div>
@@ -64,6 +64,7 @@ theme_color: "#0E1E38"
           <div class="field"><label for="k-zprava">Zpráva *</label><textarea id="k-zprava" name="zprava" rows="6" required></textarea><span class="err-msg">Napište prosím zprávu.</span></div>
           <button type="submit" class="btn btn-primary">Odeslat</button>
           <div class="form-success" role="status">Děkuji za zprávu! Ozvu se vám co nejdříve.</div>
+          <div class="form-error" role="alert">Zprávu se nepodařilo odeslat. Zkuste to prosím znovu, nebo napište přímo na <a href="mailto:lukas@lukashavranek.cz">lukas@lukashavranek.cz</a>.</div>
         </form>
       </div>
     </div>
