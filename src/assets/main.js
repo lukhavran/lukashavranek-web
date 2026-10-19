@@ -70,10 +70,14 @@
     });
   }
 
-  // contact forms: client validation, then native POST to FormSubmit
+  // contact forms: client validation, then AJAX POST to Netlify Forms
   function validEmail(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()); }
   document.querySelectorAll('form[data-contact-form]').forEach(function(form){
+    var btn = form.querySelector('button[type="submit"]');
+    var success = form.querySelector('.form-success');
+    var error = form.querySelector('.form-error');
     form.addEventListener('submit', function(e){
+      e.preventDefault();
       var ok = true;
       form.querySelectorAll('.field').forEach(function(field){
         var input = field.querySelector('input, textarea');
@@ -85,11 +89,26 @@
         if(!valid) ok = false;
       });
       if(!ok){
-        e.preventDefault();
         var firstErr = form.querySelector('.field.error input, .field.error textarea');
         if(firstErr) firstErr.focus();
+        return;
       }
-      // if ok: allow native submit to FormSubmit
+      if(success) success.style.display = 'none';
+      if(error) error.style.display = 'none';
+      if(btn){ btn.disabled = true; btn.textContent = 'Odesílám…'; }
+      fetch('/', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        body: new URLSearchParams(new FormData(form)).toString()
+      }).then(function(res){
+        if(!res.ok) throw new Error('HTTP ' + res.status);
+        form.reset();
+        if(success){ success.style.display = 'block'; success.scrollIntoView({block:'center'}); }
+      }).catch(function(){
+        if(error){ error.style.display = 'block'; error.scrollIntoView({block:'center'}); }
+      }).then(function(){
+        if(btn){ btn.disabled = false; btn.textContent = 'Odeslat'; }
+      });
     });
     form.querySelectorAll('input[required], textarea[required]').forEach(function(input){
       input.addEventListener('input', function(){
@@ -101,23 +120,4 @@
       });
     });
   });
-
-
-  // FormSubmit: redirect back to the current page (works on any domain/subpath)
-  document.querySelectorAll('form[data-contact-form]').forEach(function(form){
-    var next = document.createElement('input');
-    next.type = 'hidden';
-    next.name = '_next';
-    next.value = location.origin + location.pathname + '?odeslano=1';
-    form.appendChild(next);
-  });
-
-  // show success box after redirect back (?odeslano=1)
-  if(new URLSearchParams(location.search).get('odeslano') === '1'){
-    var box = document.querySelector('.form-success');
-    if(box){
-      box.style.display = 'block';
-      box.scrollIntoView({block:'center'});
-    }
-  }
 })();

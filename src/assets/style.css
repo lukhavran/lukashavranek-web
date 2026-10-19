@@ -251,6 +251,7 @@ form .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .field .err-msg{display:none;font-size:.8rem;color:#C23A00;margin-top:5px;font-weight:600}
 .field.error .err-msg{display:block}
 .form-success{display:none;background:var(--mint);border-radius:14px;padding:18px 20px;margin-top:18px;font-weight:500;color:var(--forest)}
+.form-error{display:none;background:#FBE9E2;border-radius:14px;padding:18px 20px;margin-top:18px;font-weight:500;color:#C23A00}
 
 /* ===== Offer page (detail) ===== */
 .legend{background:var(--mint-light);border-radius:var(--radius);padding:34px 32px;margin:36px 0}
