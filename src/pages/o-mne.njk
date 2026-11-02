@@ -72,43 +72,17 @@ theme_color: "#0E1E38"
       <span class="eyebrow">V médiích a rozhovorech</span>
       <h2>Kde jsem mluvil o své práci</h2>
       <ul class="media-list">
+{%- for m in media.appearances %}
         <li class="media-item">
-          <a href="https://www.youtube.com/watch?si=s428qHQpPhx7Xmhs&v=KD5h6ZKSMjE&feature=youtu.be" target="_blank" rel="noopener">
-            <span class="media-kind podcast">Podcast</span>
-            <span class="media-name">Vlastním tempem</span>
+          <a href="{{ m.url }}" target="_blank" rel="noopener">
+            <span class="media-kind {{ m.kind }}">{{ 'Podcast' if m.kind == 'podcast' else 'Rozhovor' }}</span>
+            <span class="media-name">{{ m.outlet }}{% if m.title %} — {{ m.title }}{% endif %}</span>
             <span class="media-arrow" aria-hidden="true">↗</span>
           </a>
         </li>
-        <li class="media-item">
-          <a href="https://drive.google.com/file/d/1wOpC7Sy3ss02x-jnUNq3U4BZtYsezbG5/view" target="_blank" rel="noopener">
-            <span class="media-kind rozhovor">Rozhovor</span>
-            <span class="media-name">Víkend MF Dnes</span>
-            <span class="media-arrow" aria-hidden="true">↗</span>
-          </a>
-        </li>
-        <li class="media-item">
-          <a href="https://www.trailrun.cz/cs/m-396-makej-vole-podcast-56-lukas-havranek-nahoru-tv-jak-oblbnout-mozek-a-natrenovat-na-ultra" target="_blank" rel="noopener">
-            <span class="media-kind podcast">Podcast</span>
-            <span class="media-name">Makej vole! — jak oblbnout mozek a natrénovat na ultra</span>
-            <span class="media-arrow" aria-hidden="true">↗</span>
-          </a>
-        </li>
-        <li class="media-item">
-          <a href="https://youtu.be/f5FNxC78oMI?si=eagXIpTBcCBO1Uu-" target="_blank" rel="noopener">
-            <span class="media-kind podcast">Podcast</span>
-            <span class="media-name">Deep Talks</span>
-            <span class="media-arrow" aria-hidden="true">↗</span>
-          </a>
-        </li>
-        <li class="media-item">
-          <a href="https://talentkompas.cz/talenty/lukas-havranek-na-vykonnosti-je-postavene-cele-me-fungovani/" target="_blank" rel="noopener">
-            <span class="media-kind rozhovor">Rozhovor</span>
-            <span class="media-name">Talent Kompas — „Na výkonnosti je postavené celé mé fungování“</span>
-            <span class="media-arrow" aria-hidden="true">↗</span>
-          </a>
-        </li>
+{%- endfor %}
       </ul>
-      <p style="font-size:.82rem;opacity:.6;margin-top:16px">Odkazy se otevírají v novém okně.</p>
+      <p style="font-size:.82rem;opacity:.6;margin-top:16px">Odkazy se otevírají v novém okně. Víc k jednotlivým rozhovorům najdete na stránce <a href="{{ root }}v-mediich/">V médiích</a>.</p>
     </div>
   </section>
 
