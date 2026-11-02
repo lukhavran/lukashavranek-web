@@ -1,0 +1,55 @@
+---
+permalink: "/v-mediich/"
+nav: "media"
+title: "V médiích — rozhovory a podcasty | Lukáš Havránek"
+description: "Rozhovory a podcasty s Lukášem Havránkem o návycích, sebedisciplíně, dopaminu a ultra běhu: Deep Talks, BrainCast, Vlastním tempem a další."
+og_title: "V médiích — Lukáš Havránek"
+og_type: "website"
+---
+{% extends "base.njk" %}
+
+{% block main %}
+
+  <section class="block">
+    <div class="wrap">
+      <span class="eyebrow">V médiích</span>
+      <h1 style="font-size:clamp(1.9rem,4vw,2.6rem)">Kde jsem mluvil o své práci</h1>
+      <p class="sub" style="margin-top:8px">{{ media.intro }}</p>
+
+      <div class="ep-list">
+{%- for m in media.appearances %}{% if m.youtube_id %}
+        <article class="ep-card">
+          <a href="{{ m.url }}" target="_blank" rel="noopener">
+            <span class="ep-thumb">
+              <img src="https://i.ytimg.com/vi/{{ m.youtube_id }}/maxresdefault.jpg" alt="{{ m.outlet }} — {{ m.title }}" width="1280" height="720" loading="lazy">
+            </span>
+            <div class="ep-body">
+              <span class="eyebrow" style="margin-bottom:6px">{{ m.outlet }}</span>
+              <h2>{{ m.title }}</h2>
+              {%- if m.text %}
+              <p>{{ m.text }}</p>
+              {%- endif %}
+              <div class="ep-meta">{% if m.year %}<span>{{ m.year }}</span><span>·</span>{% endif %}{% if m.duration_min %}<span>cca {{ m.duration_min }} min</span><span>·</span>{% endif %}<span>Přehrát ↗</span></div>
+            </div>
+          </a>
+        </article>
+{%- endif %}{% endfor %}
+      </div>
+
+      <h2 style="margin-top:56px">Psané rozhovory</h2>
+      <ul class="media-list">
+{%- for m in media.appearances %}{% if not m.youtube_id %}
+        <li class="media-item">
+          <a href="{{ m.url }}" target="_blank" rel="noopener">
+            <span class="media-kind {{ m.kind }}">{{ 'Podcast' if m.kind == 'podcast' else 'Rozhovor' }}</span>
+            <span class="media-name">{{ m.outlet }}{% if m.title %} — {{ m.title }}{% endif %}</span>
+            <span class="media-arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+{%- endif %}{% endfor %}
+      </ul>
+      <p style="font-size:.82rem;opacity:.6;margin-top:16px">Odkazy se otevírají v novém okně.</p>
+    </div>
+  </section>
+
+{% endblock %}
