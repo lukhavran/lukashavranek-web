@@ -51,14 +51,14 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 .nav .wordmark{display:flex;align-items:center;text-decoration:none}
 .nav .wordmark img{height:22px;width:auto;display:block}
 .nav-links{display:flex;gap:6px;list-style:none}
-.nav-links a{display:block;padding:9px 15px;border-radius:999px;text-decoration:none;font-weight:500;font-size:.92rem;color:var(--forest);transition:background .2s}
+.nav-links a{display:block;white-space:nowrap;padding:9px 15px;border-radius:999px;text-decoration:none;font-weight:500;font-size:.92rem;color:var(--forest);transition:background .2s}
 .nav-links a:hover{background:var(--mint)}
 .nav-links a.active{background:var(--forest);color:#fff}
 .nav-cta{background:var(--orange);color:#fff !important}
 .nav-cta:hover{background:#e35300 !important}
 .burger{display:none;background:none;border:none;cursor:pointer;padding:8px}
 .burger span{display:block;width:24px;height:2.5px;background:var(--forest);margin:5px 0;border-radius:2px;transition:.25s}
-@media(max-width:860px){
+@media(max-width:960px){
   .burger{display:block}
   .nav-links a{padding:14px 15px;font-size:1rem}
   .nav-links{position:absolute;top:72px;left:0;right:0;flex-direction:column;background:#fff;padding:14px 24px 22px;border-bottom:1px solid var(--mint);display:none;box-shadow:var(--shadow)}
