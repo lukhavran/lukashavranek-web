@@ -150,3 +150,28 @@ collections:
           - { label: Odkaz na Spotify, name: spotify_url, widget: string, required: false, hint: Až podcast poběží na Spotify, vložte sem adresu a tlačítko se na stránce objeví. }
           - { label: Odkaz na Apple Podcasts, name: apple_url, widget: string, required: false }
           - { label: Poznámka pod tlačítky, name: note, widget: text, required: false, hint: Až doplníte další platformy, text upravte nebo smažte. }
+      - name: media
+        label: V médiích — rozhovory a podcasty
+        file: src/_data/media.yml
+        fields:
+          - { label: Úvodní text, name: intro, widget: text }
+          - label: Rozhovory a podcasty
+            name: appearances
+            widget: list
+            hint: Zobrazují se v tomto pořadí, nejnovější dejte nahoru. Seznam se ukáže na stránce V médiích i na O mně.
+            summary: "{{fields.outlet}} — {{fields.title}}"
+            fields:
+              - label: Typ
+                name: kind
+                widget: select
+                default: podcast
+                options:
+                  - { label: Podcast, value: podcast }
+                  - { label: Rozhovor, value: rozhovor }
+              - { label: Pořad nebo médium, name: outlet, widget: string }
+              - { label: Název dílu nebo rozhovoru, name: title, widget: string, required: false }
+              - { label: Adresa (URL), name: url, widget: string, pattern: ['^https?://', "Adresa musí začínat https://"] }
+              - { label: ID videa na YouTube, name: youtube_id, widget: string, required: false, hint: "Část adresy za v=. Položka s videem dostane na stránce V médiích kartu s náhledem, bez videa se zařadí mezi psané rozhovory." }
+              - { label: Rok, name: year, widget: number, value_type: int, required: false }
+              - { label: Délka (minuty), name: duration_min, widget: number, value_type: int, min: 1, required: false }
+              - { label: Krátký popis, name: text, widget: text, required: false }
