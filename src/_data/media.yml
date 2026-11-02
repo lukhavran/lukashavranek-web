@@ -1,0 +1,57 @@
+intro: "Rozhovory a podcasty, ve kterých mluvím o návycích, sebedisciplíně, dopaminu, pozornosti i o ultra běhu."
+appearances:
+  - kind: podcast
+    outlet: "BrainCast"
+    title: "B7 nedokončí každý třetí. Co s tím?"
+    url: "https://www.youtube.com/watch?v=3R9YlTv3XJ4"
+    youtube_id: "3R9YlTv3XJ4"
+    year: 2026
+    duration_min: 28
+    text: "O Beskydské sedmičce, na které jsem startoval dvanáctkrát a osmkrát ji dokončil. A o tom, co jsem z ní viděl za kamerou a v zákulisí."
+  - kind: podcast
+    outlet: "Vlastním tempem"
+    title: "Do hor neutíkám. Chodím tam žít."
+    url: "https://www.youtube.com/watch?v=KD5h6ZKSMjE"
+    youtube_id: "KD5h6ZKSMjE"
+    year: 2025
+    duration_min: 104
+    text: "O ultra běhání, B7 a motivaci běhat dlouhé vzdálenosti. A taky o tom, jak pracovat s dopaminem, plánovat si čas a žít kvalitněji."
+  - kind: podcast
+    outlet: "Inspiro Jakuba Stejskala"
+    title: "Jak zlepšit efektivitu? Co je to dopamin a jak s ním pracovat"
+    url: "https://www.youtube.com/watch?v=rdcsYUCOUn0"
+    youtube_id: "rdcsYUCOUn0"
+    year: 2023
+    duration_min: 39
+    text: "O tom, jak být efektivní, co by mělo mít přednost a podle čeho se rozhodovat. A o dopaminu: co to je, jak s ním plýtváme a jak ho dostat zpátky do rovnováhy."
+  - kind: podcast
+    outlet: "Deep Talks"
+    title: "Jak se zbavit závislosti na „levném“ dopaminu?"
+    url: "https://www.youtube.com/watch?v=f5FNxC78oMI"
+    youtube_id: "f5FNxC78oMI"
+    year: 2023
+    duration_min: 44
+    text: "Jak fungují závislosti na takzvaném levném dopaminu, proč je tak těžké se pořádně soustředit a jak rozbít okovy algoritmů, které se snaží ovládat naši pozornost."
+  - kind: podcast
+    outlet: "Makej vole!"
+    title: "Jak oblbnout mozek a natrénovat na ultra"
+    url: "https://www.trailrun.cz/cs/m-396-makej-vole-podcast-56-lukas-havranek-nahoru-tv-jak-oblbnout-mozek-a-natrenovat-na-ultra"
+    youtube_id: "daWt9jEZQFs"
+    year: 2023
+    duration_min: 41
+    text: "O tréninku na ultra, specializaci na seběhy a využití glukoměru v přípravě."
+  - kind: podcast
+    outlet: "Deep Talks"
+    title: "Jak se naučit téměř libovolný návyk?"
+    url: "https://www.youtube.com/watch?v=wgNeAv1a53A"
+    youtube_id: "wgNeAv1a53A"
+    year: 2022
+    duration_min: 56
+    text: "Jak dlouhodobě posilovat vůli a sebedisciplínu, jak si vybudovat pozitivní vztah k libovolné aktivitě, třeba k běhání, a jak pokračovat po tom, co selžeme."
+  - kind: rozhovor
+    outlet: "Víkend MF Dnes"
+    url: "https://drive.google.com/file/d/1wOpC7Sy3ss02x-jnUNq3U4BZtYsezbG5/view"
+  - kind: rozhovor
+    outlet: "Talent Kompas"
+    title: "„Na výkonnosti je postavené celé mé fungování“"
+    url: "https://talentkompas.cz/talenty/lukas-havranek-na-vykonnosti-je-postavene-cele-me-fungovani/"
