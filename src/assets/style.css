@@ -249,6 +249,11 @@ section.block.tight{padding:56px 0}
 .wa-illu{width:110px;height:110px;border-radius:26px;background:#fff;padding:10px;display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:0 4px 14px rgba(20,40,90,.18)}
 .wa-illu img{width:100%;height:100%;object-fit:contain;border-radius:10px}
 .wa-qr{width:130px;height:130px;background:#fff;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:.7rem;font-style:italic;text-align:center;color:#555;padding:12px;border:2px dashed #7fa8f2}
+.wa-box.compact{grid-template-columns:1fr auto;padding:30px 32px;margin-top:36px}
+.wa-box.compact h3{color:var(--tag-zivot);margin-bottom:6px}
+.wa-box.compact p{margin:0}
+.why-link{margin-top:14px}
+.why-card .why-link a{color:var(--peach);font-weight:600}
 @media(max-width:760px){.wa-box{grid-template-columns:1fr;text-align:center;justify-items:center}}
 
 /* ===== Contact form ===== */
