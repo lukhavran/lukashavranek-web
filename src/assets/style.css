@@ -94,6 +94,26 @@ section.block.tight{padding:56px 0}
 .photo img{width:100%;height:100%;object-fit:cover;display:block}
 @media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:32px}}
 
+/* Hero s fotkou přes celou šířku (Home) */
+.hero-photo{position:relative;min-height:min(calc(100svh - 72px),720px);display:flex;align-items:flex-end;overflow:hidden;background:var(--forest)}
+.hero-photo .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:72% 30%}
+.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,22,40,.92) 0%,rgba(10,22,40,.72) 38%,rgba(10,22,40,.15) 68%,rgba(10,22,40,0) 100%)}
+.hero-photo .wrap{position:relative;z-index:1;width:100%;padding-top:80px;padding-bottom:72px}
+.hero-photo .hero-txt{max-width:600px}
+.hero-photo h1{color:#fff;font-size:clamp(2.2rem,5.4vw,3.9rem);margin:14px 0 18px}
+.hero-photo .sub{color:#fff;opacity:.9;font-size:1.12rem;max-width:38ch;margin-bottom:30px}
+.hero-btns{display:flex;flex-wrap:wrap;gap:14px}
+.hero-btns .btn{text-align:center}
+.hero-btns .btn-primary{border:2px solid transparent}
+.btn-outline-light{background:transparent;color:#fff;border:2px solid #fff}
+.btn-outline-light:hover{background:#fff;color:var(--forest)}
+@media(max-width:760px){
+  .hero-photo{min-height:calc(100svh - 72px)}
+  .hero-photo .hero-bg{object-position:70% 20%}
+  .hero-photo::after{background:linear-gradient(0deg,rgba(10,22,40,.95) 0%,rgba(10,22,40,.8) 42%,rgba(10,22,40,.1) 70%,rgba(10,22,40,0) 100%)}
+  .hero-photo .wrap{padding-bottom:44px}
+}
+
 /* ===== Round portrait ===== */
 .portrait{width:280px;height:330px;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);flex-shrink:0;display:block}
 .portrait img{width:100%;height:100%;object-fit:cover;display:block}

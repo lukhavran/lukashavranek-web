@@ -88,16 +88,17 @@ theme_color: "#0E1E38"
 {% block main %}
 
 
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div>
+  <section class="hero-photo">
+    <img class="hero-bg" src="{{ root }}assets/img/hero-scena.jpg" srcset="{{ root }}assets/img/hero-scena-900.jpg 900w, {{ root }}assets/img/hero-scena.jpg 1800w" sizes="100vw" alt="Lukáš Havránek přednáší s mikrofonem před publikem" width="1800" height="1199" fetchpriority="high">
+    <div class="wrap">
+      <div class="hero-txt">
         <span class="eyebrow">Přednášky · webináře · workshopy · akademie</span>
         <h1>Fokus a energie pro práci v digitální době</h1>
         <p class="sub">Praktická B2B školení pro týmy a manažery: pozornost, plánování, návyky a energie.</p>
-        <a href="{{ root }}nabidka-skoleni/" class="btn btn-primary">Nabídka školení</a>
-      </div>
-      <div class="hero-visual">
-        <picture class="photo"><source srcset="{{ root }}assets/img/hero.webp" type="image/webp"><img src="{{ root }}assets/img/hero.jpg" alt="Lukáš Havránek přednáší s mikrofonem před publikem" width="1600" height="1000" fetchpriority="high"></picture>
+        <div class="hero-btns">
+          <a href="{{ root }}nabidka-skoleni/" class="btn btn-primary">Nabídka školení</a>
+          <a href="{{ root }}kontakt/" class="btn btn-outline-light">Nezávazná poptávka</a>
+        </div>
       </div>
     </div>
   </section>
