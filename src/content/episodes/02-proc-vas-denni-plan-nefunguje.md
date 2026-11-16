@@ -38,7 +38,7 @@ links:
   - label: "Akademie Změň návyky, změň život 9. 9. 2026"
     url: "https://www.konec-prokrastinace.cz/akademie/registrace/2026-09-09-akademie-navyky/?_s=HAV/IG"
   - label: "WhatsApp skupina"
-    url: "https://chat.whatsapp.com/J3x4oiLzAZzCEtgnjVsUWk"
+    url: "https://chat.whatsapp.com/COQe1bEGGOm9Sn616JUQXb?s=cl&p=i&mlu=4&ilr=4&iam=2"
 links_note: "Na Akademii Změň návyky, změň život platí slevový kód **LUKAS20** — sleva 20 %."
 ---
 Ve druhé epizodě Rezonance rozebírám, proč nás obvyklé způsoby, jak řešíme zahlcení, nikam neposouvají, a jak si postavit denní plán, který vás spíš zklidní, než rozhodí. Projdeme zásady, které dělají rozdíl mezi plánem, co funguje, a seznamem úkolů, co vás ráno hned zahltí — od plánování dne dopředu a rozlišení „musí být“ vs. „mělo by být“, přes časové rezervy a pořadí úkolů, až po to, proč nepřeskakovat pauzy a smířit se s tím, že nikdy nestihnete všechno.

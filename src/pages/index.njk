@@ -204,6 +204,20 @@ theme_color: "#0E1E38"
     </div>
   </section>
 
+  <section class="block">
+    <div class="wrap">
+      <div class="about-hero">
+        <picture class="photo" style="flex:1;min-width:300px;max-width:420px"><img src="{{ root }}assets/img/moderovani-home.jpg" alt="Lukáš Havránek na pódiu" width="1000" height="666" loading="lazy"></picture>
+        <div class="txt">
+          <span class="eyebrow">Moderování</span>
+          <h2>Moderuji konference, rozhovory i&nbsp;diskuse</h2>
+          <p>Konference, rozhovory na pódiu před publikem, panelové diskuse i společenské akce. V podcastu naHoru.tv jsem vyzpovídal přes 70 osobností českého outdooru.</p>
+          <p style="margin-top:22px"><a href="{{ root }}moderovani/" class="btn btn-ghost">Více o moderování</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="block bg-mint">
     <div class="wrap">
       <div class="about-hero">
@@ -235,6 +249,7 @@ theme_color: "#0E1E38"
         <div class="why-card">
           <h3>Dlouhodobě v kontaktu</h3>
           <p>Pro účastníky mých školení mám vytvořenou WhatsApp skupinu, jejímž prostřednictvím v přiměřené frekvenci připomínám látku ze školení. Jsem lektor, který chce být k dispozici dlouhodobě.</p>
+          <p class="why-link"><a href="{{ site.whatsapp_url }}" target="_blank" rel="noopener">Přidat se do WhatsApp skupiny ↗</a></p>
         </div>
         <div class="why-card">
           <h3>Společně se trefíme</h3>
@@ -248,11 +263,11 @@ theme_color: "#0E1E38"
     <div class="wrap">
       <div class="wa-box">
         <div>
-          <h2>WhatsApp skupina</h2>
-          <p>Přidejte se do mojí bezplatné skupiny, kam 1× týdně přispívám s tématy mé specializace.</p>
+          <h2>WhatsApp skupina: tipy a zdroje</h2>
+          <p>Přidejte se do mojí bezplatné WhatsApp skupiny, kde sdílím praktické tipy, zajímavé zdroje a nový obsah. Přispívám 1× týdně, bez spamu.</p>
         </div>
         <div class="wa-illu"><img src="{{ root }}assets/img/whatsapp-qr.png" alt="QR kód pro vstup do WhatsApp skupiny" loading="lazy"></div>
-        <a class="btn btn-primary" href="https://chat.whatsapp.com/J3x4oiLzAZzCEtgnjVsUWk" target="_blank" rel="noopener">Přidat se do skupiny</a>
+        <a class="btn btn-primary" href="{{ site.whatsapp_url }}" target="_blank" rel="noopener">Přidat se do skupiny</a>
       </div>
     </div>
   </section>

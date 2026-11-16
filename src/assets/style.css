@@ -58,7 +58,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 .nav-cta:hover{background:#e35300 !important}
 .burger{display:none;background:none;border:none;cursor:pointer;padding:8px}
 .burger span{display:block;width:24px;height:2.5px;background:var(--forest);margin:5px 0;border-radius:2px;transition:.25s}
-@media(max-width:960px){
+@media(max-width:1100px){
   .burger{display:block}
   .nav-links a{padding:14px 15px;font-size:1rem}
   .nav-links{position:absolute;top:72px;left:0;right:0;flex-direction:column;background:#fff;padding:14px 24px 22px;border-bottom:1px solid var(--mint);display:none;box-shadow:var(--shadow)}
@@ -249,6 +249,11 @@ section.block.tight{padding:56px 0}
 .wa-illu{width:110px;height:110px;border-radius:26px;background:#fff;padding:10px;display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:0 4px 14px rgba(20,40,90,.18)}
 .wa-illu img{width:100%;height:100%;object-fit:contain;border-radius:10px}
 .wa-qr{width:130px;height:130px;background:#fff;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:.7rem;font-style:italic;text-align:center;color:#555;padding:12px;border:2px dashed #7fa8f2}
+.wa-box.compact{grid-template-columns:1fr auto;padding:30px 32px;margin-top:36px}
+.wa-box.compact h3{color:var(--tag-zivot);margin-bottom:6px}
+.wa-box.compact p{margin:0}
+.why-link{margin-top:14px}
+.why-card .why-link a{color:var(--peach);font-weight:600}
 @media(max-width:760px){.wa-box{grid-template-columns:1fr;text-align:center;justify-items:center}}
 
 /* ===== Contact form ===== */
@@ -371,3 +376,12 @@ footer a:hover{color:var(--peach)}
 @media (prefers-reduced-motion: reduce){*{transition:none !important;animation:none !important}html{scroll-behavior:auto}}
 
 .topic[id],[id^='blok-'],.topic-block-divider[id]{scroll-margin-top:92px}
+
+/* ===== Moderování ===== */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:38px}
+.gallery figure{margin:0;border-radius:20px;overflow:hidden;aspect-ratio:4/3;background:var(--mint)}
+.gallery img{width:100%;height:100%;object-fit:cover;display:block}
+.why-grid.formats{grid-template-columns:repeat(3,1fr)}
+#formaty{scroll-margin-top:92px}
+@media(max-width:960px){.why-grid.formats{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.gallery{grid-template-columns:1fr 1fr;gap:10px}.gallery figure{border-radius:14px}.why-grid.formats{grid-template-columns:1fr}.hero-photo.hero-mod .hero-bg{object-position:82% 80%}}

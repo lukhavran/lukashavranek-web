@@ -1,0 +1,66 @@
+---
+permalink: "/moderovani/"
+nav: "moderovani"
+title: "Moderování konferencí, rozhovorů a diskusí | Lukáš Havránek"
+description: "Moderuji konference o leadershipu, osobním rozvoji a AI, společenské akce, rozhovory na pódiu, panelové diskuse a podcast naHoru.tv."
+og_title: "Moderování — Lukáš Havránek"
+og_description: "Konference, společenské akce, rozhovory na pódiu, panelové diskuse a podcast naHoru.tv."
+og_type: "website"
+theme_color: "#0E1E38"
+---
+{% extends "base.njk" %}
+
+{% block main %}
+
+  <section class="hero-photo hero-mod">
+    <img class="hero-bg" src="{{ root }}assets/img/moderovani-hero.jpg" srcset="{{ root }}assets/img/moderovani-hero-900.jpg 900w, {{ root }}assets/img/moderovani-hero.jpg 1800w" sizes="100vw" alt="Lukáš Havránek moderuje konferenci před plným sálem" width="1800" height="1199" fetchpriority="high">
+    <div class="wrap">
+      <div class="hero-txt">
+        <span class="eyebrow">Moderování</span>
+        <h1>Moderuji konference, rozhovory i&nbsp;diskuse</h1>
+        <p class="sub">Za mikrofonem jsem si vyzkoušel řadu formátů: konference, společenské akce, rozhovory na pódiu před publikem, panelové diskuse i&nbsp;podcast.</p>
+        <div class="hero-btns">
+          <a href="{{ root }}kontakt/" class="btn btn-primary">Poptat moderování</a>
+          <a href="#formaty" class="btn btn-outline-light">Formáty, které moderuji</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block bg-mint">
+    <div class="wrap">
+      <div class="center" id="formaty"><h2>Formáty, které moderuji</h2></div>
+      <div class="why-grid formats">
+        <div class="why-card"><h3>Konference</h3><p>Témata leadership, osobní rozvoj a AI.</p></div>
+        <div class="why-card"><h3>Rozhovory na pódiu</h3><p>Živý rozhovor s hostem před publikem. Například Martin Cígler, zakladatel a spolumajitel skupiny Seyfor, nebo Daniela Pešková, členka představenstva České spořitelny.</p></div>
+        <div class="why-card"><h3>Panelové diskuse</h3><p>Debata více hostů s odlišnými pohledy. Například KRNAP versus skialpinisté.</p></div>
+        <div class="why-card"><h3>Společenské akce</h3><p>Například premiéra filmu.</p></div>
+        <div class="why-card"><h3>Podcast naHoru.tv</h3><p>Více než 70 rozhovorů s lidmi z horského prostředí v <a href="https://www.youtube.com/c/nahorutv" target="_blank" rel="noopener">našem podcastu</a>, který jsem spoluzaložil. Například Radek Jaroš nebo Alena Zárybnická. Vedu také vlastní podcast <a href="{{ root }}podcast/">Rezonance</a>.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="center"><h2>Z akcí</h2></div>
+      <div class="gallery">
+        <figure><img src="{{ root }}assets/img/moderovani-01.jpg" alt="Lukáš Havránek s mikrofonem na pódiu" width="900" height="600" loading="lazy"></figure>
+        <figure><img src="{{ root }}assets/img/moderovani-02.jpg" alt="Lukáš Havránek v divadelním sále" width="900" height="600" loading="lazy"></figure>
+        <figure><img src="{{ root }}assets/img/moderovani-03.jpg" alt="Lukáš Havránek na pódiu konference" width="900" height="600" loading="lazy"></figure>
+        <figure><img src="{{ root }}assets/img/moderovani-04.jpg" alt="Lukáš Havránek na pódiu s tabletem" width="900" height="600" loading="lazy"></figure>
+        <figure><img src="{{ root }}assets/img/moderovani-05.jpg" alt="Lukáš Havránek na osvětleném pódiu" width="900" height="600" loading="lazy"></figure>
+        <figure><img src="{{ root }}assets/img/moderovani-06.jpg" alt="Lukáš Havránek s mikrofonem v sále" width="900" height="600" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="block tight" style="padding-bottom:90px">
+    <div class="wrap">
+      <div class="bg-forest" style="border-radius:var(--radius);padding:52px 46px;text-align:center">
+        <h2 style="margin-bottom:10px">Hledáte moderátora?</h2>
+        <p style="opacity:.9;max-width:52ch;margin:0 auto 26px">Napište mi termín, místo a typ akce. Ozvu se zpět a domluvíme podrobnosti.</p>
+        <a href="{{ root }}kontakt/" class="btn btn-primary">Poptat moderování</a>
+      </div>
+    </div>
+  </section>
+{% endblock %}
