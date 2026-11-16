@@ -70,6 +70,15 @@
     });
   }
 
+  // offer page: odkaz na konkrétní téma (#id) rovnou rozbalí jeho podrobnosti
+  function openTopicFromHash(){
+    var el = location.hash.length > 1 && document.getElementById(location.hash.slice(1));
+    var more = el && el.classList.contains('topic') && el.querySelector('.topic-more');
+    if(more) more.open = true;
+  }
+  openTopicFromHash();
+  window.addEventListener('hashchange', openTopicFromHash);
+
   // contact forms: client validation, then AJAX POST to Netlify Forms
   function validEmail(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()); }
   document.querySelectorAll('form[data-contact-form]').forEach(function(form){
