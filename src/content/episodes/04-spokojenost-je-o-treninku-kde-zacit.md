@@ -31,6 +31,6 @@ links:
   - label: "Akademie Spokojenost je volba 11. 11.–9. 12. 2026"
     url: "https://www.konec-prokrastinace.cz/akademie/registrace/2026-11-11-akademie-spokojenost/?_s=HAV/IG"
   - label: "WhatsApp skupina"
-    url: "https://chat.whatsapp.com/J3x4oiLzAZzCEtgnjVsUWk"
+    url: "https://chat.whatsapp.com/COQe1bEGGOm9Sn616JUQXb?s=cl&p=i&mlu=4&ilr=4&iam=2"
 ---
 Ve čtvrté epizodě Rezonance se dívám na rozdíl mezi spokojeností a toxickou pozitivitou. Projdeme čtyři oblasti, se kterými můžeme pracovat: pozornost, vhled, propojení s ostatními a smysl. A taky proč nestačí, když nám nějaká myšlenka zarezonuje při čtení knihy nebo sledování videa. Podstatné je, co z ní dostaneme do každodenního života.
