@@ -33,7 +33,7 @@ links:
   - label: "Akademie 4 týdny ke spokojenějšímu životu 11. 11.–9. 12. 2026"
     url: "https://www.konec-prokrastinace.cz/akademie/registrace/2026-11-11-akademie-spokojenost/?_s=HAV/IG"
   - label: "WhatsApp skupina"
-    url: "https://chat.whatsapp.com/COQe1bEGGOm9Sn616JUQXb?s=cl&p=i&mlu=4&ilr=4&iam=2"
+    url: "https://chat.whatsapp.com/J3x4oiLzAZzCEtgnjVsUWk?mode=gi_t"
 links_note: "Na webinář i akademii platí slevový kód **LUKAS20** — sleva 20 %."
 ---
 Ve třetí epizodě Rezonance rozebírám, proč hluboká práce a neustálá dostupnost nejdou dohromady a proč snaha o maximální produktivitu jde nakonec proti ní. Projdeme, co říkají studie o vyrušování v práci, přepínání mezi úkoly, chybovosti a takzvané zbytkové pozornosti — tedy proč multitasking nefunguje. A taky proč základem soustředění není vypnutí notifikací, ale pocit bezpečí, že se nic nestane, když chvíli nejste k zastižení.
