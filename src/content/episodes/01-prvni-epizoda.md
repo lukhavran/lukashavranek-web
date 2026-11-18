@@ -29,7 +29,7 @@ links:
   - label: "GrowJOB Fest 18. 8. 2026"
     url: "https://fest.growjob.com/konference/"
   - label: "WhatsApp skupina"
-    url: "https://chat.whatsapp.com/COQe1bEGGOm9Sn616JUQXb?s=cl&p=i&mlu=4&ilr=4&iam=2"
+    url: "https://chat.whatsapp.com/J3x4oiLzAZzCEtgnjVsUWk?mode=gi_t"
 links_note: "Na vstupenku na GrowJOB Fest platí slevový kód **LUKAS20** — sleva 20 %."
 ---
 V první epizodě Rezonance rozebírám, proč budování návyků nestojí na přemáhání se, jak si nastavujeme nerealistická očekávání ohledně toho, jak dlouho změna trvá, a proč nám pravidlo „cokoli je lepší než nic“ pomáhá vybudovat změnu, která skutečně vydrží.
