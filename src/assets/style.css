@@ -385,3 +385,5 @@ footer a:hover{color:var(--peach)}
 #formaty{scroll-margin-top:92px}
 @media(max-width:960px){.why-grid.formats{grid-template-columns:1fr 1fr}}
 @media(max-width:760px){.gallery{grid-template-columns:1fr 1fr;gap:10px}.gallery figure{border-radius:14px}.why-grid.formats{grid-template-columns:1fr}.hero-photo.hero-mod .hero-bg{object-position:82% 80%}}
+.why-grid.formats .why-card{display:flex;flex-direction:column}
+.why-grid.formats .why-card .ex{margin-top:auto;padding-top:14px;font-size:.86rem;opacity:.72}
